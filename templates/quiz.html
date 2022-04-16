@@ -1,14 +1,16 @@
-<body>
+{% extends "layout.html" %}
+
+{% block content %}
     <script type = "text/javascript">
         let question = {{question|tojson}}
         $(document).ready(function(){
             $("#next_button").click(function(){
-            if ("{{question.next_lesson}}"=="end"){
-                window.location.href='/home'
+            if ("{{question.next_question}}"=="end"){
+                window.location.href='/'
 
             }
             else{
-                window.location.href='/quiz/{{question.next_lesson}}'
+                window.location.href='/quiz/{{question.next_question}}'
             }
             })
         })
@@ -19,4 +21,4 @@
     {{question.text}}
 
     <button id = "next_button">Next </button>
-</body>
+{% endblock %}
