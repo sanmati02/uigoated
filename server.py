@@ -9,27 +9,41 @@ current_id = 10
 lessons = [
 {
     "lesson_id": "1",
-    "next_lesson":"2"
+    "next_lesson":"2",
+    "chord":"C Major",
+
     },
 
     {
     "lesson_id": "2",
-    "next_lesson":"3"
+    "next_lesson":"3",
+    "chord":"C Major",
+    
     },
      {
     "lesson_id": "3",
-    "next_lesson":"4"
+    "next_lesson":"4",
+    "chord":"C Major",
+    
     },
 
      {
     "lesson_id": "4",
-    "next_lesson":"5"
+    "next_lesson":"5",
+    "chord":"C Major",
+    
     },
      {
     "lesson_id": "5",
-    "next_lesson":"end"
+    "next_lesson":"end",
+    "chord":"C Major",
+    
     },
-     
+     {
+        "lesson_id":"end",
+        "next_lesson": None,
+        "chord": None
+    }
 ]
 
 quiz = [
