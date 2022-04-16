@@ -1,0 +1,22 @@
+<body>
+    <script type = "text/javascript">
+        let question = {{question|tojson}}
+        $(document).ready(function(){
+            $("#next_button").click(function(){
+            if ("{{question.next_lesson}}"=="end"){
+                window.location.href='/home'
+
+            }
+            else{
+                window.location.href='/quiz/{{question.next_lesson}}'
+            }
+            })
+        })
+    </script>
+
+    {{question.title}}<br>
+    <br>
+    {{question.text}}
+
+    <button id = "next_button">Next </button>
+</body>
