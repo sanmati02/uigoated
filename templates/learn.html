@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
     <script type = "text/javascript">
         let lesson = {{lesson|tojson}}
         $(document).ready(function(){
             $("#next_button").click(function(){
             if ("{{lesson.next_lesson}}"=="end"){
-                window.location.href="/quiz/1/"
+                window.location.href="/endlearn"
 
             }
             else{
@@ -16,9 +17,9 @@
         })
     </script>
 
-    {{lesson.title}}<br>
+    <div id="title"></div>
     <br>
-    {{lesson.text}}
+    <div id ="lessontext"></div>
     <div id='piano' class='row'>
         <div id ='C' class="white">C</div>
         <div id ='C#' class="black"></div>
@@ -31,13 +32,13 @@
         <div id ='G#' class="black"></div>
         <div id = 'A'class="white">A</div>
         <div id ='A#' class="black"></div>
-        <div id = 'highB' class="white">B</div>
-        <div id = 'highC 'class="white">C</div>
+        <div id = 'B' class="white">B</div>
+        <div id = 'highC'class="white">C</div>
         <div id ='highC#' class="black"></div>
         <div id = 'highD' class="white">D</div>
         <div id = 'highE' class="white">E</div>
     </div>
-    <div><button id = "next_button">Next </button></div>
+    <div id="buttondiv"></div>
 
 
     {% endblock %}

@@ -11,32 +11,82 @@ lessons = {
         "next_lesson":"2",
         "chord":"C Major",
         "notes":["C","E","G"],
-        "note_nums":["1,5,8"]
+        "note_nums":["1,5,8"],
+        "text": "The green keys shown below show the notes that make up the C Major chord. This chord has the C as "
+                "the root note, the E as the major third, and the G as the fifth. Play around with these notes and "
+                "make sure you remember their position! On the next screen you'll get a chance to practice with this "
+                "chord. "
     },
     "2" : {
         "lesson_id": "2",
         "next_lesson":"3",
-        "chord":"D Minor",
-        "notes":["D","F","A"],
-        "note_nums":["3,7,10"]
+        "chord":"C Major",
+        "notes":["C","E","G"],
+        "note_nums":["1,5,8"],
+        "text": "The green keys shown below show 2/3 of the notes that make up the C Major chord. This chord has the "
+                "C as "
+                "the root note and the E as the major third. Press the fifth of this chord to complete this challenge!"
     },
     "3" : {
         "lesson_id": "3",
         "next_lesson":"4",
-        "chord":"E Minor",
-        "notes":["E","G","B"],
-        "note_nums":["5","9","12"]
+        "chord":"D Minor",
+        "notes":["D","F","A"],
+        "note_nums":["3,7,10"],
+        "text": "The green keys shown below show the notes that make up the D Minor chord. This chord has the D as "
+                "the root note, the F as the minor third, and the A as the fifth. Play around with these notes and "
+                "make sure you remember their position! On the next screen you'll get a chance to practice with this "
+                "chord. "
     },
     "4" : {
         "lesson_id": "4",
+        "next_lesson":"5",
+        "chord":"D Minor",
+        "notes":["D", "A", "F"],
+        "note_nums":["3,7,10"],
+        "text": "The green keys shown below show 2/3 of the notes that make up the D Minor chord. This chord has the F as "
+                "the root note and the A as the fifth. Press the minor third of this chord to complete this challenge!"
+    },
+    "5" : {
+        "lesson_id": "5",
+        "next_lesson":"6",
+        "chord":"E Minor",
+        "notes":["E","G","B"],
+        "note_nums":["5","9","12"],
+        "text": "The green keys shown below show the notes that make up the E Minor chord. This chord has the E as "
+                "the root note, the G as the minor third, and the B as the fifth. Play around with these notes and "
+                "make sure you remember their position! On the next screen you'll get a chance to practice with this "
+                "chord. "
+    },
+    "6" : {
+        "lesson_id": "6",
+        "next_lesson":"7",
+        "chord":"E Minor",
+        "notes":["G","B", "E"],
+        "note_nums":["5","9","12"],
+        "text": "The green keys shown below show 2/3 of the notes that make up the E Minor chord. This chord has the G as "
+                "the minor third and the B as the fifth. Press the root note of this chord to complete this challenge!"
+    },
+    "7" : {
+        "lesson_id": "7",
+        "next_lesson":"8",
+        "chord":"F Major",
+        "notes":["F","A","highC"],
+        "note_nums":["6","10","13"],
+        "text": "The green keys shown below show the notes that make up the F Major chord. This chord has the F as "
+                "the root note, the A as the major third, and the higher C octave as the fifth. Play around with these notes and "
+                "make sure you remember their position! On the next screen you'll get a chance to practice with this "
+                "chord. "
+    },
+    "8" : {
+        "lesson_id": "8",
         "next_lesson":"end",
         "chord":"F Major",
-        "notes":["F","A","C"],
-        "note_nums":["6","10","13"]
+        "notes":["F","A","highC"],
+        "note_nums":["6","10","13"],
+        "text": "The green keys shown below show 2/3 of the notes that make up the F Major chord. This chord has the F as "
+                "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
     },
-<<<<<<< HEAD
-]
-=======
     "end" : {
         "lesson_id":"end",
         "next_lesson": None,
@@ -45,10 +95,51 @@ lessons = {
         "note_nums":[]
     }
 }
->>>>>>> 1bd58b96c8e1b06294f4bae73188346e484a8f63
 
+quizzes = {
+    "1" : {
+        "quiz_id": "1",
+        "next_question":"2",
+        "chord":"C Major",
+        "notes":["C","E","G"],
+        "note_nums":["1,5,8"],
+        "text": "Press the three notes that make up the C Major Chord!"
+    },
+    "2" : {
+        "quiz_id": "2",
+        "next_question":"3",
+        "chord":"D Minor",
+        "notes":["D","F","A"],
+        "note_nums":["3,7,10"],
+        "text": "Press the three notes that make up the D Minor Chord!"
+    },
+    "3" : {
+        "quiz_id": "3",
+        "next_question":"4",
+        "chord":"E Minor",
+        "notes":["E","G","B"],
+        "note_nums":["5","9","12"],
+        "text": "Press the three notes that make up the E Minor Chord!"
+    },
+    "4" : {
+        "quiz_id": "4",
+        "next_question":"end",
+        "chord":"F Major",
+        "notes":["F","A","highC"],
+        "note_nums":["6","10","13"],
+        "text": "Press the three notes that make up the F Major Chord!"
+    },
+    "end" : {
+        "quiz_id":"end",
+        "next_lesson": None,
+        "chord": None,
+        "notes":[],
+        "note_nums":[]
+    }
+}
+"""
 quizzes = [
- {
+    {
     "quiz_id": "1",
     "next_question":"2"
     },
@@ -71,17 +162,23 @@ quizzes = [
     "next_question":"end"
     },   
 ]
+"""
 # ROUTES
 @app.route('/')
 def welcome():
-    return render_template('layout.html')   
+    return render_template('layout.html')
+
+@app.route('/endlearn')
+def endlearn():
+    return render_template('endlearn.html')
  
 
 @app.route('/learn/<lesson_id>')
 def learn(lesson_id):
     lesson=dict()
-    for item in lessons:
-        if item.get("lesson_id") == lesson_id:
+    for key in lessons:
+        item = lessons[key]
+        if item["lesson_id"] == lesson_id:
             lesson = item
             break
     return render_template('learn.html', lesson=lesson)  
@@ -89,8 +186,9 @@ def learn(lesson_id):
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
     question=dict()
-    for item in quizes:
-        if item.get("quiz_id") == quiz_id:
+    for key in quizzes:
+        item = quizzes[key]
+        if item["quiz_id"] == quiz_id:
             question = item
             break
     return render_template('quiz.html', question=question)  
