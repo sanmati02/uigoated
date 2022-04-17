@@ -5,42 +5,49 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-lessons = [
-{
-    "lesson_id": "1",
-    "next_lesson":"2",
-    "chord":"C Major",
-
+lessons = {
+    "1" : {
+        "lesson_id": "1",
+        "next_lesson":"2",
+        "chord":"C Major",
+        "notes":["C","E","G"],
+        "note_nums":["1,5,8"]
     },
-
-    {
-    "lesson_id": "2",
-    "next_lesson":"3",
-    "chord":"C Major",
-    
+    "2" : {
+        "lesson_id": "2",
+        "next_lesson":"3",
+        "chord":"D Minor",
+        "notes":["D","F","A"],
+        "note_nums":["3,7,10"]
     },
-     {
-    "lesson_id": "3",
-    "next_lesson":"4",
-    "chord":"C Major",
-    
+    "3" : {
+        "lesson_id": "3",
+        "next_lesson":"4",
+        "chord":"E Minor",
+        "notes":["E","G","B"],
+        "note_nums":["5","9","12"]
     },
-
-     {
-    "lesson_id": "4",
-    "next_lesson":"5",
-    "chord":"C Major",
-    
+    "4" : {
+        "lesson_id": "4",
+        "next_lesson":"end",
+        "chord":"F Major",
+        "notes":["F","A","C"],
+        "note_nums":["6","10","13"]
     },
-     {
-    "lesson_id": "5",
-    "next_lesson":"end",
-    "chord":"C Major",
-    
-    },
+<<<<<<< HEAD
 ]
+=======
+    "end" : {
+        "lesson_id":"end",
+        "next_lesson": None,
+        "chord": None,
+        "notes":[],
+        "note_nums":[]
+    }
+}
+>>>>>>> 1bd58b96c8e1b06294f4bae73188346e484a8f63
 
-quizes = [
+quizzes = [
  {
     "quiz_id": "1",
     "next_question":"2"
