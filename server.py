@@ -87,6 +87,10 @@ lessons = {
         "text": "The green keys shown below show 2/3 of the notes that make up the F Major chord. This chord has the F as "
                 "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
     },
+<<<<<<< HEAD
+=======
+]
+>>>>>>> 7635216a61eae0019a1a9a99a38b87d6379e7160
     "end" : {
         "lesson_id":"end",
         "next_lesson": None,
@@ -141,21 +145,37 @@ quizzes = {
 quizzes = [
     {
     "quiz_id": "1",
-    "next_question":"2"
+    "next_question":"2",
+    "title": "C Major Chord",
+    "text": "Pick the notes in the C Major Chord.",
+    "answer":["C", "E", "G"],
+    "note_nums":["1","5","8"]
     },
 
    {
     "quiz_id": "2",
-    "next_question":"3"
+    "next_question":"3",
+    "title": "D Minor Chord",
+    "text": "Pick the notes in the D Minor Chord.",
+    "answer":["D", "F", "A"],
+    "note_nums":["3","7","10"]
     },
   {
     "quiz_id": "3",
-    "next_question":"4"
+    "next_question":"4",
+    "title": "E Minor Chord",
+    "text": "Pick the notes in the E Minor Chord.",
+    "answer":["E", "G", "B"],
+    "note_nums":["5","9","12"]
     },
 
      {
     "quiz_id": "4",
-    "next_question":"5"
+    "next_question":"5",
+    "title": "F Major Chord",
+    "text": "Pick the notes in the F Major Chord.",
+    "answer":["F", "A", "C"],
+    "note_nums":["6","10","13"]
     },
     {
     "quiz_id": "5",
