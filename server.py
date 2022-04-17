@@ -38,14 +38,6 @@ lessons = [
     "chord":"C Major",
     
     },
-<<<<<<< HEAD
-     {
-        "lesson_id":"end",
-        "next_lesson": None,
-        "chord": None
-    }
-=======
->>>>>>> 17b75cbc5ea5e125464f0158ffcb92af536834dc
 ]
 
 quizes = [

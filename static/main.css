@@ -1,0 +1,29 @@
+.white {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 300px;
+    font-weight: bold;
+    width: 60px;
+    height: 400px;
+    background: rgb(216, 211, 211);
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .black {
+    width: 60px;
+    height: 200px;
+    background: black;
+    margin-top: 0px;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+  }
+
+  #piano {
+    margin-bottom: 30px;
+    background-color: rgb(238, 238, 238);
+    width: 1056px;
+  }
