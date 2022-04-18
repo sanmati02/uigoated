@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+<body>
+    <h1 id = "center">Learn To Play Piano!!!</h1>
+    <div id='piano' class='row'>
+        <button id ='C' class="white key">C</button>
+        <button id ='Cs' class="black key"></button>
+        <button id ='D' class="white key">D</button>
+        <button id ='D#' class="black key"></button>
+        <button id = 'E' class="white key">E</button>
+        <button id = 'F' class="white key">F</button>
+        <button id ='Fs' class="black key"></button>
+        <button id = 'G'class="white key">G</button>
+        <button id ='G#' class="black key"></button>
+        <button id = 'A'class="white key">A</button>
+        <button id ='A#' class="black key"></button>
+        <button id = 'B' class="white key">B</button>
+        <button id = 'highC'class="white key">C</button>
+        <button id ='highC#' class="black key"></button>
+        <button id = 'highD' class="white key">D</button>
+        <button id = 'highE' class="white key">E</button>
+    </div>
+</body>
+{% endblock %}

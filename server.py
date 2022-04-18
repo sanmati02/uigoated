@@ -182,7 +182,7 @@ quizzes = {
 # ROUTES
 @app.route('/')
 def welcome():
-    return render_template('layout.html')   
+    return render_template('home.html')   
  
 @app.route('/endlearn')
 def endlearn():

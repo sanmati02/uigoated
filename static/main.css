@@ -60,7 +60,6 @@
 
   #piano {
     margin-bottom: 30px;
-    background-color: rgb(238, 238, 238);
     width: 1056px;
   }
 
@@ -70,6 +69,7 @@
 
   .row {
     text-align: center;
+    margin-right: 20px;
   }
 
   .greenText {
@@ -84,4 +84,13 @@
     font-size: 30px;
 
 
+  }
+
+  #center {
+
+    text-align: center;
+  }
+
+  body {
+    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
   }

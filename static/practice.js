@@ -1,5 +1,11 @@
-$(document).ready(function () {
+function disableBut() {
+    document.getElementById("next_button").disabled = true;
+}
 
+function enableBut() {
+    document.getElementById("next_button").disabled = false;
+}
+$(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
@@ -10,12 +16,14 @@ $(document).ready(function () {
 
         playing_notes()
         let missing_num = lesson["notes"][2]
+        disableBut();
        $(".key").click(function(){
         $("#correct").empty()
         $("#incorrect").empty()
 
         console.log(this.id)
         if (this.id==missing_num){
+            enableBut();
             $("#correct").empty()
             $("#incorrect").empty()
             $("#correct").append("That is correct! Proceed to Next Screen");
@@ -103,6 +111,8 @@ function playing_notes()
 
     
 }
+
+
 
 
 

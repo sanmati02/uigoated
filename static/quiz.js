@@ -55,7 +55,16 @@ function playing_notes()
     
 }
 
+function disableBut() {
+    document.getElementById("next_button").disabled = true;
+}
+
+function enableBut() {
+    document.getElementById("next_button").disabled = false;
+}
+
 $(document).ready(function () {
+    disableBut()
     $("#quiztitle").append("<h1>"+question["chord"]+"</h1>")
     $("#quiztext").append("<p>"+question["text"]+"</p>")
     count = 3
@@ -72,6 +81,7 @@ $(document).ready(function () {
             $("#correct").empty()
             $("#incorrect").empty()
             if (count == 0) {
+                enableBut();
                 $("#correct").append("That is correct! Proceed to Next Screen");
             }
             if (count == 1) {
