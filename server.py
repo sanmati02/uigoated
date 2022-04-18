@@ -94,7 +94,8 @@ lessons = {
         "next_lesson": None,
         "chord": None,
         "notes":[],
-        "note_nums":[]
+        "note_nums":[],
+        "text": ""
     }
 }
 
@@ -170,7 +171,6 @@ quizzes = {
 
     "4": {
     "quiz_id": "4",
-<<<<<<< HEAD
     "next_question":"5"
     },
     {
@@ -178,7 +178,6 @@ quizzes = {
     "next_question":"end"
     },   
 ]
-=======
     "next_question":"end",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
@@ -187,7 +186,6 @@ quizzes = {
     }
 }
 
->>>>>>> cd40cf9639afcea2835e9726f4442dc0cc372a2e
 
 # ROUTES
 @app.route('/')
