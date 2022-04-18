@@ -173,11 +173,11 @@ quizzes = {
     "quiz_id": "4",
     "next_question":"5"
     },
-    {
+    "5": {
     "quiz_id": "5",
     "next_question":"end"
-    }   
-]
+    },
+    "end": {
     "next_question":"end",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
