@@ -5,6 +5,8 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
+score = 0
+
 lessons = {
     "1" : {
         "lesson_id": "1",
@@ -87,10 +89,6 @@ lessons = {
         "text": "The green keys shown below show 2/3 of the notes that make up the F Major chord. This chord has the F as "
                 "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
     },
-<<<<<<< HEAD
-=======
-]
->>>>>>> 7635216a61eae0019a1a9a99a38b87d6379e7160
     "end" : {
         "lesson_id":"end",
         "next_lesson": None,

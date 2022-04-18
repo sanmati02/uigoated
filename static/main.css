@@ -35,6 +35,29 @@
     margin-right: 3px;
   }
 
+  .blackred {
+    width: 60px;
+    height: 200px;
+    background: red;
+    margin-top: 0px;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .whitered {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 300px;
+    font-weight: bold;
+    width: 60px;
+    height: 400px;
+    background: red;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
   #piano {
     margin-bottom: 30px;
     background-color: rgb(238, 238, 238);
