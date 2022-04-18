@@ -88,59 +88,8 @@ lessons = {
         "note_nums":["6","10","13"],
         "text": "The green keys shown below show 2/3 of the notes that make up the F Major chord. This chord has the F as "
                 "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
-    },
-    "end" : {
-        "lesson_id":"end",
-        "next_lesson": None,
-        "chord": None,
-        "notes":[],
-        "note_nums":[],
-        "text": ""
     }
 }
-
-"""quizzes = {
-    "1" : {
-        "quiz_id": "1",
-        "next_question":"2",
-        "chord":"C Major",
-        "notes":["C","E","G"],
-        "note_nums":["1,5,8"],
-        "text": "Press the three notes that make up the C Major Chord!"
-    },
-    "2" : {
-        "quiz_id": "2",
-        "next_question":"3",
-        "chord":"D Minor",
-        "notes":["D","F","A"],
-        "note_nums":["3,7,10"],
-        "text": "Press the three notes that make up the D Minor Chord!"
-    },
-    "3" : {
-        "quiz_id": "3",
-        "next_question":"4",
-        "chord":"E Minor",
-        "notes":["E","G","B"],
-        "note_nums":["5","9","12"],
-        "text": "Press the three notes that make up the E Minor Chord!"
-    },
-    "4" : {
-        "quiz_id": "4",
-        "next_question":"end",
-        "chord":"F Major",
-        "notes":["F","A","highC"],
-        "note_nums":["6","10","13"],
-        "text": "Press the three notes that make up the F Major Chord!"
-    },
-    "end" : {
-        "quiz_id":"end",
-        "next_lesson": None,
-        "chord": None,
-        "notes":[],
-        "note_nums":[]
-    }
-}"""
-
 
 quizzes = {
     "1": {
@@ -168,16 +117,8 @@ quizzes = {
     "answer":["E", "G", "B"],
     "note_nums":["5","9","12"]
     },
-
     "4": {
     "quiz_id": "4",
-    "next_question":"5"
-    },
-    "5": {
-    "quiz_id": "5",
-    "next_question":"end"
-    },
-    "end": {
     "next_question":"end",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
