@@ -176,7 +176,7 @@ quizzes = {
     {
     "quiz_id": "5",
     "next_question":"end"
-    },   
+    }   
 ]
     "next_question":"end",
     "chord": "F Major Chord",
