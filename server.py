@@ -67,6 +67,7 @@ quizzes = [
     "next_question":"end"
     },   
 ]
+
 # ROUTES
 @app.route('/')
 def welcome():
