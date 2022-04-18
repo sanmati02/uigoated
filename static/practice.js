@@ -1,25 +1,50 @@
-
 $(document).ready(function () {
+
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
-       $("#buttondiv").append("<button id = 'practice_button'> Practice </button>");
-        $.each(lesson["notes"], function (index, item) {
-            var div = document.getElementById(item);
-            console.log(item)
-            div.className = "green";
-
-        });
+       $("#buttondiv").append("<button id = 'next_button'> Next </button>");
+  
+       document.getElementById(lesson["notes"][0]).className = "green";
+       document.getElementById(lesson["notes"][1]).className = "green";
 
         playing_notes()
+        let missing_num = lesson["notes"][2]
+       $("button").click(function(){
+        $("#correct").empty()
+        $("#incorrect").empty()
 
-        let next = lesson['lesson_id']
-            console.log(next)
-        $("#practice_button").click(function(){
+        console.log(this.id)
+        if (this.id==missing_num){
+            $("#correct").empty()
+            $("#incorrect").empty()
+            $("#correct").append("That is correct! Proceed to Next Screen");
+            console.log("clicked")
             
-            window.location.href='/practice/' + next
-        })
+            //let music = new Audio('A.wav');
+            //music.play();
+            //music.loop =true;
+            //music.playbackRate = 2;
+            //music.pause();
+        }
+        else{
+            $("#correct").empty()
+            $("#incorrect").empty()
+            $("#incorrect").append("That is incorrect! try again!");
 
+        }
+    })
+
+
+  $("#next_button").click(function(){
+      let next= lesson['next_lesson']
+    if (next=="end"){
+        window.location.href="/endlearn"
+    }
+    else{
+        window.location.href='/learn/' + next
+    }
+    })
 });
 
 function playing_notes()
@@ -35,7 +60,7 @@ function playing_notes()
         audio.play();
     })
 
-    $("#Cc").click(function(){
+    $("#Cs").click(function(){
         var audio = new Audio();
         audio.src="/static/C#.wav"
         audio.play();
@@ -59,7 +84,7 @@ function playing_notes()
         audio.play();
     })
 
-    $("#Ff").click(function(){
+    $("#Fs").click(function(){
         var audio = new Audio();
         audio.src="/static/f#.wav"
         audio.play();
@@ -78,7 +103,6 @@ function playing_notes()
 
     
 }
-
 
 
 

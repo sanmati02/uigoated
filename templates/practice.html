@@ -1,14 +1,19 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
-<script>
-    lesson = {{lesson|tojson}} 
-</script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'practice.js') }}"></script>
+    <script type = "text/javascript">
+        let lesson = {{lesson|tojson}}
+       
+    </script>
 
     <div id="title"></div>
     <br>
     <div id ="lessontext"></div>
+    <div id ="correct" class = 'greenText'></div>
+    <div id ="incorrect" class = 'redText'></div>
+
+    <audio id="buzzer" src="A.wav" type="audio/wav"> </audio>  
 
     <div id='piano' class='row'>
         <button id ='C' class="white">C</button>

@@ -139,7 +139,7 @@ quizzes = {
         "note_nums":[]
     }
 }
-"""
+
 quizzes = [
     {
     "quiz_id": "1",
@@ -180,36 +180,30 @@ quizzes = [
     "next_question":"end"
     },   
 ]
-"""
+
 # ROUTES
 @app.route('/')
 def welcome():
-    return render_template('layout.html')
-
-@app.route('/endlearn')
-def endlearn():
-    return render_template('endlearn.html')
+    return render_template('layout.html')   
  
 
 @app.route('/learn/<lesson_id>')
 def learn(lesson_id):
-    lesson=dict()
-    for key in lessons:
-        item = lessons[key]
-        if item["lesson_id"] == lesson_id:
-            lesson = item
-            break
+    lesson = lessons[lesson_id]
+
     return render_template('learn.html', lesson=lesson)  
+
+@app.route('/practice/<lesson_id>')
+def practice(lesson_id):
+    lesson = lessons[lesson_id]
+    print("HIHDwhfejkf")
+    return render_template('practice.html', lesson=lesson)  
 
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
-    question=dict()
-    for key in quizzes:
-        item = quizzes[key]
-        if item["quiz_id"] == quiz_id:
-            question = item
-            break
+    question = quizzes[quiz_id]
     return render_template('quiz.html', question=question)  
+
 
 if __name__ == '__main__':
    app.run(debug = True)

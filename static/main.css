@@ -71,3 +71,17 @@
   .row {
     text-align: center;
   }
+
+  .greenText {
+    color: green;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .redText {
+    color: red;
+    text-align: center;
+    font-size: 30px;
+
+
+  }
