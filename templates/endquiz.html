@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type = "text/javascript">
+        $(document).ready(function(){
+            $("#practice_button").click(function(){
+                window.location.href='/learn/1'
+            })
+            $("#home_button").click(function(){
+                window.location.href='/'
+            })
+        })
+        let score = {{score|tojson}} 
+</script>
+
+<body>
+    <h1>Congratulations on finishing the quiz!</h1>
+    <div>Your score: {{score}}/12</div>
+    <div><button id = 'practice_button'>More practice</button></div>
+    <div><button id = 'home_button'>Home</button></div>
+</body>
+
+
+{% endblock %}

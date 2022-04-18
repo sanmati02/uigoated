@@ -4,10 +4,11 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
     <script type = "text/javascript">
         let question = {{question|tojson}}
+        let score = {{score|tojson}}
         $(document).ready(function(){
             $("#next_button").click(function(){
             if ("{{question.next_question}}"=="end"){
-                window.location.href='/'
+                window.location.href='/endquiz'
 
             }
             else{

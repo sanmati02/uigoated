@@ -50,9 +50,27 @@ function playing_notes()
         audio.src="/static/B.wav"
         audio.play();
     })
-
-
     
+}
+
+function save_score(score){
+    data_to_save = score
+    $.ajax({
+        type: "POST",
+        url: "/save_score",
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(data_to_save),
+        success: function(result){
+            score = result["score"] 
+        },
+        error: function(request, status, error){
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    })
 }
 
 function disableBut() {
@@ -78,6 +96,9 @@ $(document).ready(function () {
         if (item.includes(this.id)){
             this.className = "green";
             count -= 1
+            score += 1
+            save_score(score)
+            console.log(score)
             $("#correct").empty()
             $("#incorrect").empty()
             if (count == 0) {
@@ -99,6 +120,9 @@ $(document).ready(function () {
             //music.pause();
         }
         else{
+            score -= 1
+            save_score(score)
+            console.log(score)
             $("#correct").empty()
             $("#incorrect").empty()
             $("#incorrect").append("That is incorrect! try again!");
@@ -107,3 +131,4 @@ $(document).ready(function () {
         
     });
 });
+

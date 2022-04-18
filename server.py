@@ -5,7 +5,7 @@ from flask import render_template
 from flask import Response, request, jsonify
 app = Flask(__name__)
 
-score = 0
+current_score = 0
 
 lessons = {
     "1" : {
@@ -203,7 +203,25 @@ def practice(lesson_id):
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
     question = quizzes[quiz_id]
-    return render_template('quiz.html', question=question)  
+    score = current_score
+    return render_template('quiz.html', question=question, score=score)  
+
+@app.route('/endquiz')
+def endquiz():
+    score = current_score
+    return render_template('endquiz.html', score=score)
+
+@app.route('/save_score',  methods=['GET', 'POST'])
+def save_score():
+    global current_score
+
+    json_data = request.get_json()
+    print(type(json_data))
+
+    current_score = int(json_data)
+
+    return jsonify(score = current_score)
+
 
 
 if __name__ == '__main__':
