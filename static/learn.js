@@ -13,7 +13,7 @@ $(document).ready(function () {
 
         playing_notes()
 
-        let next = lesson['lesson_id']
+        let next = lesson['next_lesson']
             console.log(next)
         $("#practice_button").click(function(){
             

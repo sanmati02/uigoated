@@ -98,7 +98,7 @@ lessons = {
     }
 }
 
-quizzes = {
+"""quizzes = {
     "1" : {
         "quiz_id": "1",
         "next_question":"2",
@@ -138,54 +138,55 @@ quizzes = {
         "notes":[],
         "note_nums":[]
     }
-}
+}"""
 
-quizzes = [
-    {
+
+quizzes = {
+    "1": {
     "quiz_id": "1",
     "next_question":"2",
-    "title": "C Major Chord",
+    "chord": "C Major Chord",
     "text": "Pick the notes in the C Major Chord.",
     "answer":["C", "E", "G"],
     "note_nums":["1","5","8"]
     },
 
-   {
+    "2": {
     "quiz_id": "2",
     "next_question":"3",
-    "title": "D Minor Chord",
+    "chord": "D Minor Chord",
     "text": "Pick the notes in the D Minor Chord.",
     "answer":["D", "F", "A"],
     "note_nums":["3","7","10"]
     },
-  {
+    "3": {
     "quiz_id": "3",
     "next_question":"4",
-    "title": "E Minor Chord",
+    "chord": "E Minor Chord",
     "text": "Pick the notes in the E Minor Chord.",
     "answer":["E", "G", "B"],
     "note_nums":["5","9","12"]
     },
 
-     {
+    "4": {
     "quiz_id": "4",
-    "next_question":"5",
-    "title": "F Major Chord",
+    "next_question":"end",
+    "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
-    "answer":["F", "A", "C"],
+    "answer":["F", "A", "highC"],
     "note_nums":["6","10","13"]
-    },
-    {
-    "quiz_id": "5",
-    "next_question":"end"
-    },   
-]
+    }
+}
+
 
 # ROUTES
 @app.route('/')
 def welcome():
     return render_template('layout.html')   
  
+@app.route('/endlearn')
+def endlearn():
+    return render_template('endlearn.html') 
 
 @app.route('/learn/<lesson_id>')
 def learn(lesson_id):

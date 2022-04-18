@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         playing_notes()
         let missing_num = lesson["notes"][2]
-       $("button").click(function(){
+       $(".key").click(function(){
         $("#correct").empty()
         $("#incorrect").empty()
 
