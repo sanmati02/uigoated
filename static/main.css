@@ -1,0 +1,96 @@
+.white {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 300px;
+    font-weight: bold;
+    width: 60px;
+    height: 400px;
+    background: rgb(216, 211, 211);
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .black {
+    width: 60px;
+    height: 200px;
+    background: black;
+    margin-top: 0px;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+    
+  }
+
+  .green {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 300px;
+    font-weight: bold;
+    width: 60px;
+    height: 400px;
+    background: green;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .blackred {
+    width: 60px;
+    height: 200px;
+    background: red;
+    margin-top: 0px;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  .whitered {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 300px;
+    font-weight: bold;
+    width: 60px;
+    height: 400px;
+    background: red;
+    margin-top: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+
+  #piano {
+    margin-bottom: 30px;
+    width: 1056px;
+  }
+
+  #lessontext {
+    text-align: center;
+  }
+
+  .row {
+    text-align: center;
+    margin-right: 20px;
+  }
+
+  .greenText {
+    color: green;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .redText {
+    color: red;
+    text-align: center;
+    font-size: 30px;
+
+
+  }
+
+  #center {
+
+    text-align: center;
+  }
+
+  body {
+    background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  }

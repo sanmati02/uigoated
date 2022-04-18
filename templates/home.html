@@ -1,28 +1,10 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
-    <script type = "text/javascript">
-        let question = {{question|tojson}}
-        let score = {{score|tojson}}
-        $(document).ready(function(){
-            $("#next_button").click(function(){
-            if ("{{question.next_question}}"=="end"){
-                window.location.href='/endquiz'
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
 
-            }
-            else{
-                window.location.href='/quiz/{{question.next_question}}'
-            }
-            })
-        })
-    </script>
-
-    <div id="quiztitle"></div>
-    <br>
-    <div id ="quiztext"></div>
-    <div id ="correct" class = 'greenText'></div>
-    <div id ="incorrect" class = 'redText'></div>
+<body>
+    <h1 id = "center">Learn To Play Piano!!!</h1>
     <div id='piano' class='row'>
         <button id ='C' class="white key">C</button>
         <button id ='Cs' class="black key"></button>
@@ -41,5 +23,5 @@
         <button id = 'highD' class="white key">D</button>
         <button id = 'highE' class="white key">E</button>
     </div>
-    <div><button id = 'next_button'>Next </button></div>
+</body>
 {% endblock %}

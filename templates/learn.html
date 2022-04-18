@@ -1,24 +1,34 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <script type = "text/javascript">
-        let lesson = {{lesson|tojson}}
-        $(document).ready(function(){
-            $("#next_button").click(function(){
-            if ("{{lesson.next_lesson}}"=="end"){
-                window.location.href="/quiz/1/"
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+<script>
+    lesson = {{lesson|tojson}} 
+</script>
 
-            }
-            else{
-                window.location.href='/learn/{{lesson.next_lesson}}'
-            }
-            })
-        })
-    </script>
-
-    {{lesson.title}}<br>
+    <div id="title"></div>
     <br>
-    {{lesson.text}}
+    <div id ="lessontext"></div>
 
-    <button id = "next_button">Next </button>
+    <div id='piano' class='row'>
+        <button id ='C' class="white key">C</button>
+        <button id ='Cs' class="black key"></button>
+        <button id ='D' class="white key">D</button>
+        <button id ='D#' class="black key"></button>
+        <button id = 'E' class="white key">E</button>
+        <button id = 'F' class="white key">F</button>
+        <button id ='Fs' class="black key"></button>
+        <button id = 'G'class="white key">G</button>
+        <button id ='G#' class="black key"></button>
+        <button id = 'A'class="white key">A</button>
+        <button id ='A#' class="black key"></button>
+        <button id = 'B' class="white key">B</button>
+        <button id = 'highC'class="white key">C</button>
+        <button id ='highC#' class="black key"></button>
+        <button id = 'highD' class="white key">D</button>
+        <button id = 'highE' class="white key">E</button>
+    </div>
+    <div id="buttondiv"></div>
+
+
     {% endblock %}
