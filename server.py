@@ -94,7 +94,8 @@ lessons = {
         "next_lesson": None,
         "chord": None,
         "notes":[],
-        "note_nums":[]
+        "note_nums":[],
+        "text": ""
     }
 }
 
@@ -170,6 +171,13 @@ quizzes = {
 
     "4": {
     "quiz_id": "4",
+    "next_question":"5"
+    },
+    "5": {
+    "quiz_id": "5",
+    "next_question":"end"
+    },
+    "end": {
     "next_question":"end",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
