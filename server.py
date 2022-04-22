@@ -10,6 +10,7 @@ current_score = 0
 lessons = {
     "1" : {
         "lesson_id": "1",
+        "prev_lesson":"start",
         "next_lesson":"2",
         "chord":"C Major",
         "notes":["C","E","G"],
@@ -21,6 +22,7 @@ lessons = {
     },
     "2" : {
         "lesson_id": "2",
+        "prev_lesson":"1",
         "next_lesson":"3",
         "chord":"C Major",
         "notes":["C","E","G"],
@@ -31,6 +33,7 @@ lessons = {
     },
     "3" : {
         "lesson_id": "3",
+        "prev_lesson":"2",
         "next_lesson":"4",
         "chord":"D Minor",
         "notes":["D","F","A"],
@@ -42,6 +45,7 @@ lessons = {
     },
     "4" : {
         "lesson_id": "4",
+        "prev_lesson":"3",
         "next_lesson":"5",
         "chord":"D Minor",
         "notes":["D", "A", "F"],
@@ -51,6 +55,7 @@ lessons = {
     },
     "5" : {
         "lesson_id": "5",
+        "prev_lesson":"4",
         "next_lesson":"6",
         "chord":"E Minor",
         "notes":["E","G","B"],
@@ -62,6 +67,7 @@ lessons = {
     },
     "6" : {
         "lesson_id": "6",
+        "prev_lesson":"5",
         "next_lesson":"7",
         "chord":"E Minor",
         "notes":["G","B", "E"],
@@ -71,6 +77,7 @@ lessons = {
     },
     "7" : {
         "lesson_id": "7",
+        "prev_lesson":"6",
         "next_lesson":"8",
         "chord":"F Major",
         "notes":["F","A","highC"],
@@ -82,6 +89,7 @@ lessons = {
     },
     "8" : {
         "lesson_id": "8",
+        "prev_lesson":"7",
         "next_lesson":"end",
         "chord":"F Major",
         "notes":["F","A","highC"],
@@ -146,7 +154,6 @@ def learn(lesson_id):
 @app.route('/practice/<lesson_id>')
 def practice(lesson_id):
     lesson = lessons[lesson_id]
-    print("HIHDwhfejkf")
     return render_template('practice.html', lesson=lesson)  
 
 @app.route('/quiz/<quiz_id>')

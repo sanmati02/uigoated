@@ -2,17 +2,29 @@
 $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
-        $("#buttondiv").empty();
-       $("#buttondiv").append("<button id = 'practice_button'> Practice </button>");
+        //$("#buttondiv").empty();
+       //$("#buttondiv").append("<button id = 'practice_button'> Practice </button>");
         $.each(lesson["notes"], function (index, item) {
             var div = document.getElementById(item);
             console.log(item)
             div.className = "green";
 
         });
+        console.log("here")
+        console.log(lesson["prev_lesson"])
+
+        $("#prev_button").click(function(){
+            console.log(lesson["prev_lesson"])
+            if (lesson["prev_lesson"] == "start"){
+                window.location.href='/'
+            }
+            else{  
+            window.location.href='/practice/' + lesson["prev_lesson"]
+            }
+        })
 
         playing_notes()
-
+        
         let next = lesson['next_lesson']
             console.log(next)
         $("#practice_button").click(function(){

@@ -14,6 +14,11 @@ $(document).ready(function () {
        document.getElementById(lesson["notes"][0]).className = "green";
        document.getElementById(lesson["notes"][1]).className = "green";
 
+       $("#prev_button").click(function(){
+           console.log("HERE")
+        window.location.href='/learn/' + lesson["lesson_id"]
+        
+    })
         playing_notes()
         let missing_num = lesson["notes"][2]
         disableBut();

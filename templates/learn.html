@@ -1,6 +1,9 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 <script>
     lesson = {{lesson|tojson}} 
@@ -28,7 +31,17 @@
         <button id = 'highD' class="white key">D</button>
         <button id = 'highE' class="white key">E</button>
     </div>
-    <div id="buttondiv"></div>
+ 
+    <div class='row' id='prev/next'>
+        <div class= "leftMargin col-md-6">
+            <button id = 'prev_button'> Previous </button>
+        </div>
+        <div class= "rightMargin col-md-6">
+            <button id = 'practice_button'> Practice </button>
+        </div>
+       
+    </div>
+
 
 
     {% endblock %}
