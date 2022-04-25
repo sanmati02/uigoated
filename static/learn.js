@@ -38,7 +38,9 @@ function playing_notes()
 {
     $("#A").click(function(){
         var audio = new Audio();
-        audio.src="/static/A.wav"
+        audio.src="/static/A5.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
     $("#C").click(function(){
@@ -47,10 +49,11 @@ function playing_notes()
         audio.play();
     })
 
-    $("#Cc").click(function(){
+    $("#Cs").click(function(){
         var audio = new Audio();
-        audio.src="/static/C#.wav"
+        audio.src="/static/c_sharp.wav"
         audio.play();
+        
     })
 
     $("#D").click(function(){
@@ -71,9 +74,9 @@ function playing_notes()
         audio.play();
     })
 
-    $("#Ff").click(function(){
+    $("#Fs").click(function(){
         var audio = new Audio();
-        audio.src="/static/f#.wav"
+        audio.src="/static/f_sharp.wav"
         audio.play();
     })
     $("#G").click(function(){
@@ -83,12 +86,41 @@ function playing_notes()
     })
     $("#B").click(function(){
         var audio = new Audio();
-        audio.src="/static/B.wav"
+        audio.src="/static/B5.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
 
+    $("#highC").click(function(){
+        var audio = new Audio();
+        audio.src="/static/C6.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
 
-    
+    $("#As").click(function(){
+        var audio = new Audio();
+        audio.src="/static/a_sharp.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Gs").click(function(){
+        var audio = new Audio();
+        audio.src="/static/g_sharp.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Ds").click(function(){
+        var audio = new Audio();
+        audio.src="/static/d_sharp.wav"
+        audio.play();
+    })
 }
 
 

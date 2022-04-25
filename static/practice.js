@@ -1,3 +1,5 @@
+//import sound from '/static/A.mp3'
+
 function disableBut() {
     document.getElementById("next_button").disabled = true;
 }
@@ -5,11 +7,19 @@ function disableBut() {
 function enableBut() {
     document.getElementById("next_button").disabled = false;
 }
+
+function highlight(obj){
+    var orig = obj.style.background;
+    obj.style.background = 'red';
+    setTimeout(function(){
+         obj.style.background = orig;
+    }, 300);
+ }
 $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
-       $("#buttondiv").append("<button id = 'next_button'> Next </button>");
+       //$("#buttondiv").append("<button id = 'next_button'> Next </button>");
   
        document.getElementById(lesson["notes"][0]).className = "green";
        document.getElementById(lesson["notes"][1]).className = "green";
@@ -28,22 +38,21 @@ $(document).ready(function () {
 
         console.log(this.id)
         if (this.id==missing_num){
+            this.style.background = 'green'
             enableBut();
             $("#correct").empty()
             $("#incorrect").empty()
             $("#correct").append("That is correct! Proceed to Next Screen");
+
             console.log("clicked")
-            
-            //let music = new Audio('A.wav');
-            //music.play();
-            //music.loop =true;
-            //music.playbackRate = 2;
-            //music.pause();
+        
         }
         else{
+            highlight(this)
             $("#correct").empty()
             $("#incorrect").empty()
             $("#incorrect").append("That is incorrect! try again!");
+
 
         }
     })
@@ -64,7 +73,9 @@ function playing_notes()
 {
     $("#A").click(function(){
         var audio = new Audio();
-        audio.src="/static/A.wav"
+        audio.src="/static/A5.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
     $("#C").click(function(){
@@ -75,8 +86,9 @@ function playing_notes()
 
     $("#Cs").click(function(){
         var audio = new Audio();
-        audio.src="/static/C#.wav"
+        audio.src="/static/c_sharp.wav"
         audio.play();
+        
     })
 
     $("#D").click(function(){
@@ -99,7 +111,7 @@ function playing_notes()
 
     $("#Fs").click(function(){
         var audio = new Audio();
-        audio.src="/static/f#.wav"
+        audio.src="/static/f_sharp.wav"
         audio.play();
     })
     $("#G").click(function(){
@@ -109,12 +121,41 @@ function playing_notes()
     })
     $("#B").click(function(){
         var audio = new Audio();
-        audio.src="/static/B.wav"
+        audio.src="/static/B5.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
 
+    $("#highC").click(function(){
+        var audio = new Audio();
+        audio.src="/static/C6.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
 
-    
+    $("#As").click(function(){
+        var audio = new Audio();
+        audio.src="/static/a_sharp.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Gs").click(function(){
+        var audio = new Audio();
+        audio.src="/static/g_sharp.mp3"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Ds").click(function(){
+        var audio = new Audio();
+        audio.src="/static/d_sharp.wav"
+        audio.play();
+    })
 }
 
 
