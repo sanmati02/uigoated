@@ -68,7 +68,7 @@ $(document).ready(function () {
     }
     })
 
-    $('#popper').hover(function() {
+    $('#popper1').hover(function() {
             $('#pop').toggle();
         });
 });

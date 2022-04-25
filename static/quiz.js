@@ -168,6 +168,9 @@ $(document).ready(function () {
     });
     $('#popper1').hover(function() {
             $('#hint').toggle();
-        });
+    });
+    $('#popper').hover(function() {
+        $('#pop').toggle();
+    });
 });
 

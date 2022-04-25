@@ -33,7 +33,7 @@ $(document).ready(function () {
             window.location.href='/practice/' + next
         })
 
-        $('#popper').hover(function() {
+        $('#popper1').hover(function() {
             $('#pop').toggle();
         });
 
