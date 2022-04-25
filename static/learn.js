@@ -2,6 +2,7 @@
 $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
+    
         //$("#buttondiv").empty();
        //$("#buttondiv").append("<button id = 'practice_button'> Practice </button>");
         $.each(lesson["notes"], function (index, item) {
@@ -31,6 +32,10 @@ $(document).ready(function () {
             
             window.location.href='/practice/' + next
         })
+
+        $('#popper').hover(function() {
+            $('#pop').toggle();
+        });
 
 });
 

@@ -62,10 +62,14 @@
     margin-bottom: 30px;
     width: 1056px;
   }
-
-  #lessontext {
-    text-align: center;
+/* 
+  #help {
+    text-align: right;
   }
+
+  #lessontext{
+    
+  } */
 
   .row {
     text-align: center;
@@ -102,3 +106,24 @@
     text-align: left;
 
   }
+
+  #popper{
+    text-align: right;
+    cursor: pointer;
+    margin: 1px;
+    padding: 1px;
+  }
+
+  #pop{
+    display              : none;
+    position             : relative;
+    z-index              : 99999;
+    padding              : 5px;
+    background           : #3AB9AE;
+    border               : 1px solid #A2ADBC;
+    /* -moz-border-radius   : 20px; */
+    /* -webkit-border-radius: 20px; */
+    margin               : 0px;
+    /* -webkit-box-shadow   : 0px 0px 5px 0px rgba(164, 164, 164, 1); */
+    /* box-shadow           : 0px 0px 5px 0px rgba(164, 164, 164, 1); */
+}
