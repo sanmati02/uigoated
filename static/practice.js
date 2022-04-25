@@ -67,6 +67,10 @@ $(document).ready(function () {
         window.location.href='/learn/' + next
     }
     })
+
+    $('#popper').hover(function() {
+            $('#pop').toggle();
+        });
 });
 
 function playing_notes()

@@ -106,7 +106,10 @@ quizzes = {
     "chord": "C Major Chord",
     "text": "Pick the notes in the C Major Chord.",
     "answer":["C", "E", "G"],
-    "note_nums":["1","5","8"]
+    "note_nums":["1","5","8"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
+            "third is two whole steps up from the root and the fifth is two whole steps up from the third. Each key "
+            "on the piano is a half step! "
     },
 
     "2": {
@@ -115,7 +118,11 @@ quizzes = {
     "chord": "D Minor Chord",
     "text": "Pick the notes in the D Minor Chord.",
     "answer":["D", "F", "A"],
-    "note_nums":["3","7","10"]
+    "note_nums":["3","7","10"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
+            "third is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
+            "Each key "
+            "on the piano is a half step! "
     },
     "3": {
     "quiz_id": "3",
@@ -123,7 +130,11 @@ quizzes = {
     "chord": "E Minor Chord",
     "text": "Pick the notes in the E Minor Chord.",
     "answer":["E", "G", "B"],
-    "note_nums":["5","9","12"]
+    "note_nums":["5","9","12"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
+            "third is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
+            "Each key "
+            "on the piano is a half step! "
     },
     "4": {
     "quiz_id": "4",
@@ -131,7 +142,10 @@ quizzes = {
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
     "answer":["F", "A", "highC"],
-    "note_nums":["6","10","13"]
+    "note_nums":["6","10","13"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
+            "third is two whole steps up from the root and the fifth is two whole steps up from the third. Each key "
+            "on the piano is a half step! "
     }
 }
 
