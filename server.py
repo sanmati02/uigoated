@@ -159,7 +159,11 @@ def practice(lesson_id):
 @app.route('/quiz/<quiz_id>')
 def quiz(quiz_id):
     question = quizzes[quiz_id]
-    score = current_score
+    if (quiz_id == "1"):
+        print("score is 0")
+        score = 0
+    else:
+        score = current_score
     return render_template('quiz.html', question=question, score=score)  
 
 @app.route('/endquiz')
@@ -172,7 +176,6 @@ def save_score():
     global current_score
 
     json_data = request.get_json()
-    print(type(json_data))
 
     current_score = int(json_data)
 

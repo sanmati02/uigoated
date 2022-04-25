@@ -119,6 +119,8 @@ $(document).ready(function () {
     disableBut()
     $("#quiztitle").append("<h1>"+question["chord"]+"</h1>")
     $("#quiztext").append("<p>"+question["text"]+"</p>")
+    
+    console.log("hello")
     count = 3
     playing_notes()
     $(".key").click(function(){
