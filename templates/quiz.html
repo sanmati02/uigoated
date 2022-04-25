@@ -22,6 +22,21 @@
     <br>
     <div id="score">Score: {{score}}</div>
     <div id ="quiztext"></div>
+    <div class ="row">
+        <div class = "col-md-6">
+            <div id="popper1">HINT</div></br>
+            <div id="hint">
+                <p>{{question.hint}}</p>
+            </div>
+        </div>
+        <div class = "col-md-6">
+            <div id="popper">HELP</div></br>
+            <div id="pop">
+                <p>{{question.text}}</p>
+            </div>
+        </div>
+    </div>
+
     <div id ="correct" class = 'greenText'></div>
     <div id ="incorrect" class = 'redText'></div>
     <div id='piano' class='row'>

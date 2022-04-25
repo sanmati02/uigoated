@@ -166,5 +166,8 @@ $(document).ready(function () {
         }
         
     });
+    $('#popper1').hover(function() {
+            $('#hint').toggle();
+        });
 });
 
