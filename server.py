@@ -109,7 +109,7 @@ quizzes = {
     "note_nums":["1","5","8"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
             "third is two whole steps up from the root and the fifth is two whole steps up from the third. Each key "
-            "on the piano is a half step! "
+            "on the piano is a half step and a whole step is made up of two half steps! "
     },
 
     "2": {
@@ -122,7 +122,7 @@ quizzes = {
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
             "third is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
             "Each key "
-            "on the piano is a half step! "
+            "on the piano is a half step and a whole step is made up of two half steps! "
     },
     "3": {
     "quiz_id": "3",
@@ -134,7 +134,7 @@ quizzes = {
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
             "third is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
             "Each key "
-            "on the piano is a half step! "
+            "on the piano is a half step and a whole step is made up of two half steps! "
     },
     "4": {
     "quiz_id": "4",
@@ -145,7 +145,7 @@ quizzes = {
     "note_nums":["6","10","13"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
             "third is two whole steps up from the root and the fifth is two whole steps up from the third. Each key "
-            "on the piano is a half step! "
+            "on the piano is a half step and a whole step is made up of two half steps! "
     }
 }
 
