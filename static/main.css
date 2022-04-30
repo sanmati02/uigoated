@@ -119,8 +119,9 @@
     cursor: pointer;
     margin: 1px;
     padding: 1px;
-    width: 10px;
     margin-left: 425px;
+    width: 50px;
+
   }
 
     #popper1{
@@ -128,7 +129,7 @@
     cursor: pointer;
     margin: 1px;
     padding: 1px;
-    width: 10px;
+    width: 50px;
   }
 
   #pop{
@@ -193,7 +194,7 @@
   border-radius:5px;
   font-size: 25px; 
   margin-top: 50px;
-  
+
 }
 
 .middle{
@@ -229,3 +230,6 @@
   margin-left: -90px !important;
 }
 
+.img{
+
+}
