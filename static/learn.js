@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    $("#title").append("<h1>"+lesson["chord"]+"</h1>")
+    $("#title").append("<h1 >"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
     
         //$("#buttondiv").empty();

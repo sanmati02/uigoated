@@ -1,11 +1,11 @@
 //import sound from '/static/A.mp3'
 
 function disableBut() {
-    document.getElementById("next_button").disabled = true;
+    document.getElementById("next_button").style.visibility= "hidden";
 }
 
 function enableBut() {
-    document.getElementById("next_button").disabled = false;
+    document.getElementById("next_button").style.visibility= "visible";
 }
 
 function highlight(obj){
@@ -19,6 +19,8 @@ $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
+        $("#correct").empty()
+        $("#incorrect").empty()
        //$("#buttondiv").append("<button id = 'next_button'> Next </button>");
   
        document.getElementById(lesson["notes"][0]).className = "green";

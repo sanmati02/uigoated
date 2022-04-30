@@ -1,3 +1,13 @@
+function highlight(obj){
+    var orig = obj.style.background;
+    obj.style.background = 'red';
+    setTimeout(function(){
+         obj.style.background = orig;
+    }, 300);
+ }
+
+
+
 function playing_notes()
 {
     $("#A").click(function(){
@@ -108,12 +118,13 @@ function save_score(score){
 }
 
 function disableBut() {
-    document.getElementById("next_button").disabled = true;
+    document.getElementById("next_button").style.visibility= "hidden";
 }
 
 function enableBut() {
-    document.getElementById("next_button").disabled = false;
+    document.getElementById("next_button").style.visibility= "visible";
 }
+
 
 $(document).ready(function () {
     disableBut()
@@ -159,6 +170,7 @@ $(document).ready(function () {
             score -= 1
             save_score(score)
             console.log(score)
+            highlight(this)
             $("#correct").empty()
             $("#incorrect").empty()
             $("#incorrect").append("That is incorrect! try again!");

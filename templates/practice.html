@@ -7,12 +7,14 @@
        
     </script>
 
-    <div id="title"></div>
+    <div class = "title" id="title"></div>
     <br>
-    <div id ="correct" class = 'greenText'></div>
-    <div id ="incorrect" class = 'redText'></div>
+   
+    <div id ="correct" class = 'greenText'>That is correct! Proceed to Next Screen</div>
+   
+    <div id ="incorrect" class = 'redText'>That is incorrect! try again!</div>
 
-
+   
     <div id='piano' class='row'>
         <button id ='C' class="white key">C</button>
         <button id ='Cs' class="black key"></button>
@@ -31,21 +33,26 @@
         <button id = 'highD' class="white key">D</button>
         <button id = 'highE' class="white key">E</button>
     </div>
-    <div id="popper1">HELP</div></br>
-    <div id="pop">
-        <p>{{lesson.text}}</p>
-    </div>
+   
 
 
 
     <div class='row' id='prev/next'>
         <div class= "leftMargin col-md-6">
-            <button id = 'prev_button'> Previous </button>
+            <button class = 'buttonPrevNext' id = 'prev_button'> Previous </button>
         </div>
         <div class= "rightMargin col-md-6">
-            <button id = 'next_button'> Next </button>
+            <button class = 'buttonPrevNext' id = 'next_button'> Next </button>
         </div>
        
+    </div>
+    <br>
+
+    <div class = "helpButton" id="popper1">Help</div>
+  
+   
+    <div id="pop">
+        <p>{{lesson.text}}</p>
     </div>
 
     

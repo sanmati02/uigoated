@@ -9,9 +9,12 @@
     lesson = {{lesson|tojson}} 
 </script>
 
-    <div id="title"></div>
-    <!-- <div id="help">?<div id="lessontext"></div></div> -->
 
+
+    <div class = "title" id="title"></div>
+    <!-- <div id="help">?<div id="lessontext"></div></div> -->
+    <br>
+    <br>
     <div id='piano' class='row'>
         <button id ='C' class="white key">C</button>
         <button id ='Cs' class="black key"></button>
@@ -30,20 +33,26 @@
         <button id = 'highD' class="white key">D</button>
         <button id = 'highE' class="white key">E</button>
     </div>
-    <div id="popper1">HELP</div></br>
-    <div id="pop">
-        <p>{{lesson.text}}</p>
-    </div>
+   
 
  
     <div class='row' id='prev/next'>
         <div class= "leftMargin col-md-6">
-            <button id = 'prev_button'> Previous </button>
+            <button class = 'buttonPrevNext' id = 'prev_button'> Previous </button>
         </div>
         <div class= "rightMargin col-md-6">
-            <button id = 'practice_button'> Practice </button>
+            <button class = 'buttonPrevNext' id = 'practice_button'> Practice </button>
         </div>
        
+    </div>
+
+    <br>
+   
+    <div class = helpButton id="popper1">Help</div>
+  
+
+    <div id="pop">
+        <p>{{lesson.text}}</p>
     </div>
 
 
