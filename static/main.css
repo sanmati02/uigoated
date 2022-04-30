@@ -61,7 +61,7 @@
   #piano {
     margin-bottom: 30px;
     width: 1056px;
-    margin-left:20px;
+    margin-left:8px;
   }
 /* 
   #help {
@@ -82,17 +82,16 @@
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    padding-bottom: 10px;
-    
+    padding-bottom: 20px;
+
   }
 
   .redText {
-    color: rgb(207, 131, 131);
+    color: rgb(190, 102, 102);
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
   div{
     font-family: Georgia;
@@ -113,7 +112,6 @@
   }
   .leftMargin{
     text-align: left;
-
   }
 
   #popper{
@@ -187,6 +185,17 @@
   font-size: 25px; 
 }
 
+.endLearn{
+  
+  background-color: rgb(139, 196, 139);
+  color:white;
+  border-width: 1px;
+  border-radius:5px;
+  font-size: 25px; 
+  margin-top: 50px;
+  
+}
+
 .middle{
   text-align: middle !important;
   
@@ -206,7 +215,7 @@
   font-size: 15px;
   border-width: 1px;
   border-radius:5px;
-  width: 50px !important;
+  width: 45px !important;
   padding-left: 5px !important;
   background-color: rgb(204, 160, 200);
 
@@ -214,5 +223,9 @@
 
 .whiteText{
   color:white
+}
+
+.extraPadding{
+  margin-left: -90px !important;
 }
 

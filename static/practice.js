@@ -19,8 +19,8 @@ $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
-        $("#correct").empty()
-        $("#incorrect").empty()
+        $("#comment").empty()
+
        //$("#buttondiv").append("<button id = 'next_button'> Next </button>");
   
        document.getElementById(lesson["notes"][0]).className = "green";
@@ -35,25 +35,22 @@ $(document).ready(function () {
         let missing_num = lesson["notes"][2]
         disableBut();
        $(".key").click(function(){
-        $("#correct").empty()
-        $("#incorrect").empty()
+        $("#comment").empty()
+
 
         console.log(this.id)
         if (this.id==missing_num){
             this.style.background = 'green'
             enableBut();
-            $("#correct").empty()
-            $("#incorrect").empty()
-            $("#correct").append("That is correct! Proceed to Next Screen");
-
+            $("#comment").empty()
+            $("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
             console.log("clicked")
         
         }
         else{
             highlight(this)
-            $("#correct").empty()
-            $("#incorrect").empty()
-            $("#incorrect").append("That is incorrect! try again!");
+            $("#comment").empty()
+            $("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
 
 
         }

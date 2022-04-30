@@ -14,10 +14,21 @@
 </script>
 
 <body>
-    <h1>Congratulations on finishing the quiz!</h1>
-    <div>Your score: {{score}}/12</div>
-    <div><button id = 'practice_button'>More practice</button></div>
-    <div><button id = 'home_button'>Home</button></div>
+    <div class = "title">
+        <h1 >Congratulations on finishing the quiz!</h1>
+    </div> 
+    <h1>Your score: {{score}}/12</h1>
+
+    <div class = 'row'>
+        <div class = col-6>
+            <div><button class = endLearn id = 'practice_button'>More practice</button></div>
+        </div>
+        <div class = col-6>
+            <div><button class = endLearn id = 'home_button'>Home</button></div>
+        </div>
+        
+    </div> 
+    
 </body>
 
 

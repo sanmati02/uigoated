@@ -135,8 +135,8 @@ $(document).ready(function () {
     count = 3
     playing_notes()
     $(".key").click(function(){
-        $("#correct").empty()
-        $("#incorrect").empty()
+        $("#comment").empty()
+
         
         console.log(this.id)
         item = question["answer"]
@@ -146,34 +146,37 @@ $(document).ready(function () {
             score += 1
             save_score(score)
             console.log(score)
-            $("#correct").empty()
-            $("#incorrect").empty()
+            $("#comment").empty()
             if (count == 0) {
                 enableBut();
-                $("#correct").append("That is correct! Proceed to Next Screen");
+                $("#comment").empty()
+
+                $("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
             }
             if (count == 1) {
-                $("#correct").append("That is correct! Now input the last note");
+                $("#comment").empty()
+
+                $("#comment").append("<div class = greenText>That is correct! Now input the last note<div>")
+
             }
             if (count == 2) {
-                $("#correct").append("That is correct! Now input the last two notes");
+                $("#comment").empty()
+
+                $("#comment").append("<div class = greenText>That is correct! Now input the last two notes<div>")
             }
             console.log("clicked")
             
-            //let music = new Audio('A.wav');
-            //music.play();
-            //music.loop =true;
-            //music.playbackRate = 2;
-            //music.pause();
+          
         }
         else{
+            $("#comment").empty()
+
             score -= 1
             save_score(score)
             console.log(score)
             highlight(this)
-            $("#correct").empty()
-            $("#incorrect").empty()
-            $("#incorrect").append("That is incorrect! try again!");
+            $("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
+
 
         }
         
