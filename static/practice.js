@@ -159,6 +159,50 @@ function playing_notes()
         audio.src="/static/d_sharp.wav"
         audio.play();
     })
+    document.addEventListener('keydown', function(event) {
+    if(event.keyCode == 65) {
+        document.getElementById("C").click();
+    }
+    if(event.keyCode == 83) {
+        document.getElementById("D").click();
+    }
+    if(event.keyCode == 68) {
+        document.getElementById("E").click();
+    }
+    if(event.keyCode == 70) {
+        document.getElementById("F").click();
+    }
+    if(event.keyCode == 71) {
+        document.getElementById("G").click();
+    }
+    if(event.keyCode == 72) {
+        document.getElementById("A").click();
+    }
+    if(event.keyCode == 74) {
+        document.getElementById("B").click();
+        var audio = new Audio();
+        audio.src="/static/B5.mp3"
+        audio.play();
+    }
+    if(event.keyCode == 75) {
+        document.getElementById("highC").click();
+    }
+    if(event.keyCode == 87) {
+        document.getElementById("Cs").click();
+    }
+    if(event.keyCode == 69) {
+        document.getElementById("Ds").click();
+    }
+    if(event.keyCode == 84) {
+        document.getElementById("Fs").click();
+    }
+    if(event.keyCode == 89) {
+        document.getElementById("Gs").click();
+    }
+    if(event.keyCode == 85) {
+        document.getElementById("As").click();
+    }
+    });
 }
 
 
