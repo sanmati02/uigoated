@@ -5,7 +5,7 @@
     font-weight: bold;
     width: 60px;
     height: 400px;
-    background: rgb(216, 211, 211);
+    background: white;
     margin-top: 0;
     margin-left: 3px;
     margin-right: 3px;
@@ -164,7 +164,7 @@
 }
 
 .navbar-custom{
-  background-color: #6D8A96
+  background-color: black;
 }
 
 .title{
@@ -179,7 +179,7 @@
 }
 .startbutton{
   
-  background-color: #FF9B42;
+  background-color: #0e89b6;
   color:white;
   border-width: 1px;
   border-radius:5px;
