@@ -27,8 +27,8 @@ $(document).ready(function () {
        document.getElementById(lesson["notes"][1]).className = "green";
 
        $("#prev_button").click(function(){
-           console.log("HERE")
-        window.location.href='/learn/' + lesson["lesson_id"]
+           console.log("prev_lesson; " +lesson["prev_lesson"])
+        window.location.href='/learn/' + lesson["prev_lesson"]
         
     })
         playing_notes()
