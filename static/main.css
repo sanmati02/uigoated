@@ -234,6 +234,10 @@
   color:black
 }
 
-.img{
+.rightAlign{
+  text-align: right;
+}
 
+.leftAlign{
+  text-align: left;
 }

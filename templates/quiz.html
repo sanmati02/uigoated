@@ -20,7 +20,7 @@
 
     <div class = "title" id="quiztitle"></div>
     <br>
-    <br>
+ 
 
     <div id ="comment" ></div>
 
@@ -43,7 +43,19 @@
         <button id = 'highD' class="white key">D</button>
         <button id = 'highE' class="white key">E</button>
     </div>
-    <div class="score">Score: {{score}}</div>
+
+<div class = 'row'>
+    <div class  ='col-6 leftAlign'>
+        <div class="score">Score: {{score}}</div>
+    </div>
+
+    <div class = 'col-6'>
+        <div class = rightAlign>
+            <button class = 'buttonPrevNext' id = 'next_button'>Next </button>
+        </div>
+    </div>
+</div>
+
     <div class ="row">
         <div class = "col-md-6 leftMargin">
             <!-- <div class = helpButton id="popper1">Hint</div></br> -->
@@ -62,6 +74,6 @@
     </div>
 
 
-    <div><button class = 'buttonPrevNext' id = 'next_button'>Next </button></div>
+    
 </div>
 {% endblock %}
