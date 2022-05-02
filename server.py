@@ -15,7 +15,7 @@ lessons = {
         "chord":"C Major",
         "notes":["C","E","G"],
         "note_nums":["1,5,8"],
-        "text": "The green keys shown below show the notes that make up the C Major chord. This chord has the C as "
+        "text": "The green keys shown above show the notes that make up the C Major chord. This chord has the C as "
                 "the root note, the E as the major third, and the G as the fifth. Play around with these notes and "
                 "make sure you remember their position! On the next screen you'll get a chance to practice with this "
                 "chord. "
@@ -27,7 +27,7 @@ lessons = {
         "chord":"C Major",
         "notes":["C","E","G"],
         "note_nums":["1,5,8"],
-        "text": "The green keys shown below show 2/3 of the notes that make up the C Major chord. This chord has the "
+        "text": "The green keys shown above show 2/3 of the notes that make up the C Major chord. This chord has the "
                 "C as "
                 "the root note and the E as the major third. Press the fifth of this chord to complete this challenge!"
     },
@@ -38,7 +38,7 @@ lessons = {
         "chord":"D Minor",
         "notes":["D","F","A"],
         "note_nums":["3,7,10"],
-        "text": "The green keys shown below show the notes that make up the D Minor chord. This chord has the D as "
+        "text": "The green keys shown above show the notes that make up the D Minor chord. This chord has the D as "
                 "the root note, the F as the minor third, and the A as the fifth. Play around with these notes and "
                 "make sure you remember their position! On the next screen you'll get a chance to practice with this "
                 "chord. "
@@ -50,7 +50,7 @@ lessons = {
         "chord":"D Minor",
         "notes":["D", "A", "F"],
         "note_nums":["3,7,10"],
-        "text": "The green keys shown below show 2/3 of the notes that make up the D Minor chord. This chord has the F as "
+        "text": "The green keys shown above show 2/3 of the notes that make up the D Minor chord. This chord has the F as "
                 "the root note and the A as the fifth. Press the minor third of this chord to complete this challenge!"
     },
     "5" : {
@@ -60,7 +60,7 @@ lessons = {
         "chord":"E Minor",
         "notes":["E","G","B"],
         "note_nums":["5","9","12"],
-        "text": "The green keys shown below show the notes that make up the E Minor chord. This chord has the E as "
+        "text": "The green keys shown above show the notes that make up the E Minor chord. This chord has the E as "
                 "the root note, the G as the minor third, and the B as the fifth. Play around with these notes and "
                 "make sure you remember their position! On the next screen you'll get a chance to practice with this "
                 "chord. "
@@ -72,7 +72,7 @@ lessons = {
         "chord":"E Minor",
         "notes":["G","B", "E"],
         "note_nums":["5","9","12"],
-        "text": "The green keys shown below show 2/3 of the notes that make up the E Minor chord. This chord has the G as "
+        "text": "The green keys shown above show 2/3 of the notes that make up the E Minor chord. This chord has the G as "
                 "the minor third and the B as the fifth. Press the root note of this chord to complete this challenge!"
     },
     "7" : {
@@ -82,7 +82,7 @@ lessons = {
         "chord":"F Major",
         "notes":["F","A","highC"],
         "note_nums":["6","10","13"],
-        "text": "The green keys shown below show the notes that make up the F Major chord. This chord has the F as "
+        "text": "The green keys shown above show the notes that make up the F Major chord. This chord has the F as "
                 "the root note, the A as the major third, and the higher C octave as the fifth. Play around with these notes and "
                 "make sure you remember their position! On the next screen you'll get a chance to practice with this "
                 "chord. "
@@ -94,7 +94,7 @@ lessons = {
         "chord":"F Major",
         "notes":["F","A","highC"],
         "note_nums":["6","10","13"],
-        "text": "The green keys shown below show 2/3 of the notes that make up the F Major chord. This chord has the F as "
+        "text": "The green keys shown above show 2/3 of the notes that make up the F Major chord. This chord has the F as "
                 "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
     }
 }
