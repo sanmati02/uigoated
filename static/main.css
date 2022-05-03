@@ -243,3 +243,11 @@
 .leftAlign{
   text-align: left;
 }
+
+#final_score{
+  text-align:center;
+}
+
+#score_number{
+  font-size:70px;
+}
