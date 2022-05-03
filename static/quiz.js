@@ -169,27 +169,28 @@ function enableBut() {
 
 $(document).ready(function () {
     disableBut()
+    
     $("#quiztitle").append("<h1>"+question["chord"]+"</h1>")
     $("#quiztext").append("<p>"+question["text"]+"</p>")
     $("#score").empty()
     $("#score").append("<div>Score: "+score+"</div>")
     
     console.log("hello")
+    let clicked = []
+    console.log("clicked: " + clicked)
     count = 3
     playing_notes()
     $(".key").click(function(){
         $("#comment").empty()
-
-        
         console.log(this.id)
         item = question["answer"]
-        if (item.includes(this.id)){
+        if (item.includes(this.id) && (clicked.includes(this.id) == false)){
             this.className = "green";
             count -= 1
-            save_score(score)
             $("#comment").empty()
             if (count == 0) {
                 score += 1
+                save_score(score)
                 enableBut();
                 $("#comment").empty()
 
@@ -199,6 +200,7 @@ $(document).ready(function () {
             }
             if (count == 1) {
                 score += 1
+                save_score(score)
                 $("#comment").empty()
 
                 $("#comment").append("<div class = greenText>That is correct! Now input the last note<div>")
@@ -207,6 +209,7 @@ $(document).ready(function () {
             }
             if (count == 2) {
                 score += 1
+                save_score(score)
                 $("#comment").empty()
 
                 $("#comment").append("<div class = greenText>That is correct! Now input the last two notes<div>")
@@ -214,14 +217,16 @@ $(document).ready(function () {
                 $("#score").append("<div>Score: "+score+"</div>")
             }
             console.log("clicked")
-            
+            clicked.push(this.id)
           
         }
-        else{
+        else if(clicked.includes(this.id) == false && count > 0){
             $("#comment").empty()
 
             score -= 1
             save_score(score)
+            $("#score").empty()
+            $("#score").append("<div>Score: "+score+"</div>")
             console.log(score)
             highlight(this)
             $("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
