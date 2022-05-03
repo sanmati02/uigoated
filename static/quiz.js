@@ -171,6 +171,8 @@ $(document).ready(function () {
     disableBut()
     $("#quiztitle").append("<h1>"+question["chord"]+"</h1>")
     $("#quiztext").append("<p>"+question["text"]+"</p>")
+    $("#score").empty()
+    $("#score").append("<div>Score: "+score+"</div>")
     
     console.log("hello")
     count = 3
@@ -184,26 +186,32 @@ $(document).ready(function () {
         if (item.includes(this.id)){
             this.className = "green";
             count -= 1
-            score += 1
             save_score(score)
-            console.log(score)
             $("#comment").empty()
             if (count == 0) {
+                score += 1
                 enableBut();
                 $("#comment").empty()
 
                 $("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
+                $("#score").empty()
+                $("#score").append("<div>Score: "+score+"</div>")
             }
             if (count == 1) {
+                score += 1
                 $("#comment").empty()
 
                 $("#comment").append("<div class = greenText>That is correct! Now input the last note<div>")
-
+                $("#score").empty()
+                $("#score").append("<div>Score: "+score+"</div>")
             }
             if (count == 2) {
+                score += 1
                 $("#comment").empty()
 
                 $("#comment").append("<div class = greenText>That is correct! Now input the last two notes<div>")
+                $("#score").empty()
+                $("#score").append("<div>Score: "+score+"</div>")
             }
             console.log("clicked")
             

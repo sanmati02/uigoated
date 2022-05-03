@@ -95,7 +95,6 @@
   }
   div{
     font-family: Georgia;
-    color: white;
 }
   #center {
 
@@ -165,6 +164,7 @@
 
 .navbar-custom{
   background-color: black;
+  color: white;
 }
 
 .title{
@@ -230,8 +230,10 @@
   margin-left: -90px !important;
 }
 
-.score{
-  color:black
+#score{
+  color:black !important;
+  font-size: 25px;
+  padding: 10px;
 }
 
 .rightAlign{
