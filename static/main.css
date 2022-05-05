@@ -168,14 +168,8 @@
 }
 
 .title{
-  
-  padding-bottom:7px;
-  padding-top:7px;
- 
   color: black;
-  width: 100vw;
-  margin-left:-165px !important;
-  text-align: center;
+  text-align: center !important;
 }
 .startbutton{
   

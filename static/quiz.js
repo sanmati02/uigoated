@@ -95,6 +95,18 @@ function playing_notes()
         audio.src="/static/d_sharp.wav"
         audio.play();
     })
+
+    $("#highD").click(function(){
+        var audio = new Audio();
+        audio.src="/static/D6.mp4"
+        audio.play();
+    })
+    $("#highE").click(function(){
+        var audio = new Audio();
+        audio.src="/static/E6.mp4"
+        audio.play();
+    })
+
     document.addEventListener('keydown', function(event) {
     if(event.keyCode == 65) {
         document.getElementById("C").click();
@@ -183,24 +195,27 @@ $(document).ready(function () {
     count = 3
     playing_notes()
     $(".key").click(function(){
-        $('#comment').removeClass('greenText');
+        //$('#comment').removeClass('greenText');
         $('#comment').removeClass('redText');
         console.log(this.id)
+        console.log(count)
         item = question["answer"]
         if (item.includes(this.id) && (clicked.includes(this.id) == false)){
             this.className = "green";
             count -= 1
             $//("#comment").empty()
-            if (count == 0) {
+            if (count == 0 ) {
                 score += 1
                 save_score(score)
                 enableBut();
                 //$("#comment").empty()
+                $('#comment').addClass('greenText');
 
                 //$("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
                 document.getElementById("comment").style.visibility= "visible";
                 $('#comment').addClass('greenText');
                 $("#comment").text("That is correct! Proceed to Next Screen")
+                console.log("OMG")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
@@ -228,6 +243,8 @@ $(document).ready(function () {
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
+
+           
             console.log("clicked")
             clicked.push(this.id)
           

@@ -147,6 +147,17 @@ function playing_notes()
         audio.src="/static/d_sharp.wav"
         audio.play();
     })
+
+    $("#highD").click(function(){
+        var audio = new Audio();
+        audio.src="/static/D6.mp4"
+        audio.play();
+    })
+    $("#highE").click(function(){
+        var audio = new Audio();
+        audio.src="/static/E6.mp4"
+        audio.play();
+    })
     document.addEventListener('keydown', function(event) {
     if(event.keyCode == 65) {
         document.getElementById("C").click();
