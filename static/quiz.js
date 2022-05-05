@@ -174,6 +174,8 @@ $(document).ready(function () {
     $("#quiztext").append("<p>"+question["text"]+"</p>")
     $("#score").empty()
     $("#score").append("<div>Score: "+score+"</div>")
+    document.getElementById("comment").style.visibility= "hidden";
+
     
     console.log("hello")
     let clicked = []
@@ -181,38 +183,48 @@ $(document).ready(function () {
     count = 3
     playing_notes()
     $(".key").click(function(){
-        $("#comment").empty()
+        $('#comment').removeClass('greenText');
+        $('#comment').removeClass('redText');
         console.log(this.id)
         item = question["answer"]
         if (item.includes(this.id) && (clicked.includes(this.id) == false)){
             this.className = "green";
             count -= 1
-            $("#comment").empty()
+            $//("#comment").empty()
             if (count == 0) {
                 score += 1
                 save_score(score)
                 enableBut();
-                $("#comment").empty()
+                //$("#comment").empty()
 
-                $("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
+                //$("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
+                document.getElementById("comment").style.visibility= "visible";
+                $('#comment').addClass('greenText');
+                $("#comment").text("That is correct! Proceed to Next Screen")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
             if (count == 1) {
                 score += 1
                 save_score(score)
-                $("#comment").empty()
+                //$("#comment").empty()
 
-                $("#comment").append("<div class = greenText>That is correct! Now input the last note<div>")
+                //$("#comment").append("<div class = greenText>That is correct! Now input the last note<div>")
+                document.getElementById("comment").style.visibility= "visible";
+                $('#comment').addClass('greenText');
+                $("#comment").text("That is correct! Now input the last note")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
             if (count == 2) {
                 score += 1
                 save_score(score)
-                $("#comment").empty()
+                //$("#comment").empty()
 
-                $("#comment").append("<div class = greenText>That is correct! Now input the last two notes<div>")
+                //$("#comment").append("<div class = greenText>That is correct! Now input the last two notes<div>")
+                document.getElementById("comment").style.visibility= "visible";
+                $('#comment').addClass('greenText');
+                $("#comment").text("That is correct! Now input the last two notes")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
@@ -221,7 +233,7 @@ $(document).ready(function () {
           
         }
         else if(clicked.includes(this.id) == false && count > 0){
-            $("#comment").empty()
+            //$("#comment").empty()
 
             score -= 1
             save_score(score)
@@ -229,7 +241,10 @@ $(document).ready(function () {
             $("#score").append("<div>Score: "+score+"</div>")
             console.log(score)
             highlight(this)
-            $("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
+            //$("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
+            document.getElementById("comment").style.visibility= "visible";
+            $('#comment').addClass('redText');
+            $("#comment").text("That is incorrect. Try Again!")
 
 
         }

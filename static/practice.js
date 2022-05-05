@@ -1,4 +1,3 @@
-//import sound from '/static/A.mp3'
 
 function disableBut() {
     document.getElementById("next_button").style.visibility= "hidden";
@@ -19,7 +18,9 @@ $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
-        $("#comment").empty()
+        document.getElementById("comment").style.visibility= "hidden";
+
+        
 
        //$("#buttondiv").append("<button id = 'next_button'> Next </button>");
   
@@ -35,22 +36,26 @@ $(document).ready(function () {
         let missing_num = lesson["notes"][2]
         disableBut();
        $(".key").click(function(){
-        $("#comment").empty()
+        $('#comment').removeClass('greenText');
+        $('#comment').removeClass('redText');
+
 
 
         console.log(this.id)
         if (this.id==missing_num){
             this.style.background = 'green'
             enableBut();
-            $("#comment").empty()
-            $("#comment").append("<div class = greenText>That is correct! Proceed to Next Screen<div>")
-            console.log("clicked")
+            document.getElementById("comment").style.visibility= "visible";
+            $("#comment").text("That is correct! Proceed to Next Screen")
+            $('#comment').addClass('greenText');
+
         
         }
         else{
             highlight(this)
-            $("#comment").empty()
-            $("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
+            document.getElementById("comment").style.visibility= "visible";
+            $('#comment').addClass('redText');
+            $("#comment").text("That is incorrect. Try Again!")
 
 
         }
