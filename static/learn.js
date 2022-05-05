@@ -43,7 +43,7 @@ function highlight(obj){
     obj.style.background = 'gray';
     setTimeout(function(){
          obj.style.background = orig;
-    }, 300);
+    }, 100);
  }
 
 

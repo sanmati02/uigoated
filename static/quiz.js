@@ -3,7 +3,7 @@ function highlight(obj){
     obj.style.background = 'red';
     setTimeout(function(){
          obj.style.background = orig;
-    }, 300);
+    }, 100);
  }
 
 

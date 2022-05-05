@@ -10,9 +10,10 @@ function enableBut() {
 function highlight(obj){
     var orig = obj.style.background;
     obj.style.background = 'red';
-    setTimeout(function(){
+    x = setTimeout(function(){
          obj.style.background = orig;
-    }, 300);
+    }, 100);
+    
  }
 $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
