@@ -252,7 +252,11 @@ $(document).ready(function () {
         else if(clicked.includes(this.id) == false && count > 0){
             //$("#comment").empty()
 
-            score -= 1
+            if (score > 0) {
+                score -= 1
+            } else {
+                score = 0
+            }
             save_score(score)
             $("#score").empty()
             $("#score").append("<div>Score: "+score+"</div>")
