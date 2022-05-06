@@ -9,153 +9,198 @@ function highlight(obj){
 
 function playing_notes()
 {
-    $("#A").click(function(){
+    $("#C5").click(function(){
         highlight(this)
         var audio = new Audio();
-        audio.src="/static/A5.mp3"
-        audio.playbackRate = 0.8
-        audio.volume=1.0
-        audio.play();
-    })
-    $("#C").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/C.wav"
-        audio.play();
-    })
-
-    $("#Cs").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/c_sharp.wav"
-        audio.play();
-        
-    })
-
-    $("#D").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/D.wav"
-        audio.play();
-    })
-
-    $("#E").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/E.wav"
-        audio.play();
-    })
-
-    $("#F").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/F.wav"
-        audio.play();
-    })
-
-    $("#Fs").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/f_sharp.wav"
-        audio.play();
-    })
-    $("#G").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/g.wav"
-        audio.play();
-    })
-    $("#B").click(function(){
-        highlight(this)
-        var audio = new Audio();
-        audio.src="/static/B5.mp3"
+        audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
         audio.volume=1.0
         audio.play();
     })
 
-    $("#highC").click(function(){
+    $("#Db5").click(function(){
         highlight(this)
         var audio = new Audio();
-        audio.src="/static/C6.mp3"
+        audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
         audio.volume=1.0
         audio.play();
     })
 
-    $("#As").click(function(){
+    $("#D5").click(function(){
         highlight(this)
         var audio = new Audio();
-        audio.src="/static/a_sharp.mp3"
+        audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
         audio.volume=1.0
         audio.play();
     })
 
-    $("#Gs").click(function(){
+    $("#Eb5").click(function(){
         highlight(this)
         var audio = new Audio();
-        audio.src="/static/g_sharp.mp3"
+        audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
         audio.volume=1.0
         audio.play();
     })
 
-    $("#Ds").click(function(){
+    $("#E5").click(function(){
         highlight(this)
         var audio = new Audio();
-        audio.src="/static/d_sharp.wav"
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
-    $("#highD").click(function(){
+
+    $("#F5").click(function(){
+        highlight(this)
         var audio = new Audio();
-        audio.src="/static/D6.mp4"
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
-    $("#highE").click(function(){
+
+    $("#Gb5").click(function(){
+        highlight(this)
         var audio = new Audio();
-        audio.src="/static/E6.mp4"
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
         audio.play();
     })
+
+    $("#G5").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Ab5").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#A5").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Bb5").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#B5").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#C6").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Db6").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#D6").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
+    $("#Eb6").click(function(){
+        highlight(this)
+        var audio = new Audio();
+        audio.src="/static/wav/" + this.id + ".wav"
+        audio.playbackRate = 0.8
+        audio.volume=1.0
+        audio.play();
+    })
+
     document.addEventListener('keydown', function(event) {
     if(event.keyCode == 65) {
-        document.getElementById("C").click();
+        document.getElementById("C5").click();
     }
     if(event.keyCode == 83) {
-        document.getElementById("D").click();
+        document.getElementById("D5").click();
     }
     if(event.keyCode == 68) {
-        document.getElementById("E").click();
+        document.getElementById("E5").click();
     }
     if(event.keyCode == 70) {
-        document.getElementById("F").click();
+        document.getElementById("F5").click();
     }
     if(event.keyCode == 71) {
-        document.getElementById("G").click();
+        document.getElementById("G5").click();
     }
     if(event.keyCode == 72) {
-        document.getElementById("A").click();
+        document.getElementById("A5").click();
     }
     if(event.keyCode == 74) {
-        document.getElementById("B").click();
+        document.getElementById("B5").click();
     }
     if(event.keyCode == 75) {
-        document.getElementById("highC").click();
+        document.getElementById("C6").click();
+    }
+    if(event.keyCode == 76) {
+        document.getElementById("D6").click();
     }
     if(event.keyCode == 87) {
-        document.getElementById("Cs").click();
+        document.getElementById("Db5").click();
     }
     if(event.keyCode == 69) {
-        document.getElementById("Ds").click();
+        document.getElementById("Eb5").click();
     }
     if(event.keyCode == 84) {
-        document.getElementById("Fs").click();
+        document.getElementById("Gb5").click();
     }
     if(event.keyCode == 89) {
-        document.getElementById("Gs").click();
+        document.getElementById("Ab5").click();
     }
     if(event.keyCode == 85) {
-        document.getElementById("As").click();
+        document.getElementById("Bb5").click();
+    }
+    if(event.keyCode == 79) {
+        document.getElementById("Db6").click();
+    }
+    if(event.keyCode == 80) {
+        document.getElementById("Eb6").click();
     }
     });
 }

@@ -13,7 +13,7 @@ lessons = {
         "prev_lesson":"start",
         "next_lesson":"2",
         "chord":"C Major",
-        "notes":["C","E","G"],
+        "notes":["C5","E5","G5"],
         "note_nums":["1,5,8"],
         "text": "The green keys shown above show the notes that make up the C Major chord. This chord has the C as "
                 "the root note, the E as the major third, and the G as the fifth. Play around with these notes and "
@@ -25,7 +25,7 @@ lessons = {
         "prev_lesson":"1",
         "next_lesson":"3",
         "chord":"C Major",
-        "notes":["C","E","G"],
+        "notes":["C5","E5","G5"],
         "note_nums":["1,5,8"],
         "text": "The green keys shown above show 2/3 of the notes that make up the C Major chord. This chord has the "
                 "C as "
@@ -36,7 +36,7 @@ lessons = {
         "prev_lesson":"2",
         "next_lesson":"4",
         "chord":"D Minor",
-        "notes":["D","F","A"],
+        "notes":["D5","F5","A5"],
         "note_nums":["3,7,10"],
         "text": "The green keys shown above show the notes that make up the D Minor chord. This chord has the D as "
                 "the root note, the F as the minor third, and the A as the fifth. Play around with these notes and "
@@ -48,7 +48,7 @@ lessons = {
         "prev_lesson":"3",
         "next_lesson":"5",
         "chord":"D Minor",
-        "notes":["D", "A", "F"],
+        "notes":["D5", "A5", "F5"],
         "note_nums":["3,7,10"],
         "text": "The green keys shown above show 2/3 of the notes that make up the D Minor chord. This chord has the F as "
                 "the root note and the A as the fifth. Press the minor third of this chord to complete this challenge!"
@@ -58,7 +58,7 @@ lessons = {
         "prev_lesson":"4",
         "next_lesson":"6",
         "chord":"E Minor",
-        "notes":["E","G","B"],
+        "notes":["E5","G5","B5"],
         "note_nums":["5","9","12"],
         "text": "The green keys shown above show the notes that make up the E Minor chord. This chord has the E as "
                 "the root note, the G as the minor third, and the B as the fifth. Play around with these notes and "
@@ -70,7 +70,7 @@ lessons = {
         "prev_lesson":"5",
         "next_lesson":"7",
         "chord":"E Minor",
-        "notes":["G","B", "E"],
+        "notes":["G5","B5", "E5"],
         "note_nums":["5","9","12"],
         "text": "The green keys shown above show 2/3 of the notes that make up the E Minor chord. This chord has the G as "
                 "the minor third and the B as the fifth. Press the root note of this chord to complete this challenge!"
@@ -80,7 +80,7 @@ lessons = {
         "prev_lesson":"6",
         "next_lesson":"8",
         "chord":"F Major",
-        "notes":["F","A","highC"],
+        "notes":["F5","A5","C6"],
         "note_nums":["6","10","13"],
         "text": "The green keys shown above show the notes that make up the F Major chord. This chord has the F as "
                 "the root note, the A as the major third, and the higher C octave as the fifth. Play around with these notes and "
@@ -92,7 +92,7 @@ lessons = {
         "prev_lesson":"7",
         "next_lesson":"end",
         "chord":"F Major",
-        "notes":["F","A","highC"],
+        "notes":["F5","A5","C6"],
         "note_nums":["6","10","13"],
         "text": "The green keys shown above show 2/3 of the notes that make up the F Major chord. This chord has the F as "
                 "the root and the A as the major third. Press the fifth of this chord to complete this challenge!"
@@ -105,7 +105,7 @@ quizzes = {
     "next_question":"2",
     "chord": "C Major Chord",
     "text": "Pick the notes in the C Major Chord.",
-    "answer":["C", "E", "G"],
+    "answer":["C5", "E5", "G5"],
     "note_nums":["1","5","8"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
             "third is two whole steps up from the root and the fifth is a whole step and a half up from the third. Each key "
@@ -117,7 +117,7 @@ quizzes = {
     "next_question":"3",
     "chord": "D Minor Chord",
     "text": "Pick the notes in the D Minor Chord.",
-    "answer":["D", "F", "A"],
+    "answer":["D5", "F5", "A5"],
     "note_nums":["3","7","10"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
             "is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
@@ -129,7 +129,7 @@ quizzes = {
     "next_question":"4",
     "chord": "E Minor Chord",
     "text": "Pick the notes in the E Minor Chord.",
-    "answer":["E", "G", "B"],
+    "answer":["E5", "G5", "B5"],
     "note_nums":["5","9","12"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
             "third is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
@@ -141,7 +141,7 @@ quizzes = {
     "next_question":"end",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
-    "answer":["F", "A", "highC"],
+    "answer":["F5", "A5", "C6"],
     "note_nums":["6","10","13"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
             "third is two whole steps up from the root and the fifth is a whole step and a half up from the third. Each key "

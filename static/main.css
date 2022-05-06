@@ -249,3 +249,8 @@
 .black.key{
   color:white;
 }
+
+.kb-ref{
+  font-weight: normal;
+  color:rgb(179, 179, 179)
+}
