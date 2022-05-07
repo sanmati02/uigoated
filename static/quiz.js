@@ -244,8 +244,6 @@ $(document).ready(function () {
     $("#score").append("<div>Score: "+score+"</div>")
     document.getElementById("comment").style.visibility= "hidden";
 
-    
-    console.log("hello")
     let clicked = []
     console.log("clicked: " + clicked)
     count = 3
@@ -253,8 +251,6 @@ $(document).ready(function () {
     $(".key").click(function(){
         //$('#comment').removeClass('greenText');
         $('#comment').removeClass('redText');
-        console.log(this.id)
-        console.log(count)
         item = question["answer"]
         if (item.includes(this.id) && (clicked.includes(this.id) == false)){
             this.className = "green";
@@ -271,7 +267,6 @@ $(document).ready(function () {
                 document.getElementById("comment").style.visibility= "visible";
                 $('#comment').addClass('greenText');
                 $("#comment").text("That is correct! Proceed to Next Screen")
-                console.log("OMG")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
             }
@@ -300,8 +295,6 @@ $(document).ready(function () {
                 $("#score").append("<div>Score: "+score+"</div>")
             }
 
-           
-            console.log("clicked")
             clicked.push(this.id)
           
         }
@@ -316,15 +309,16 @@ $(document).ready(function () {
             save_score(score)
             $("#score").empty()
             $("#score").append("<div>Score: "+score+"</div>")
-            console.log(score)
             highlight(this)
             //$("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
             document.getElementById("comment").style.visibility= "visible";
             $('#comment').addClass('redText');
             $("#comment").text("That is incorrect. Try Again!")
+            clicked.push(this.id)
 
 
         }
+        console.log("clicked: " + clicked)
         
     });
     $('#popper1').hover(function() {
