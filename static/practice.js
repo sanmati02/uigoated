@@ -8,19 +8,24 @@ function enableBut() {
 }
 
 function highlight(obj){
-    var orig = obj.style.background;
-    obj.style.background = 'red';
-    x = setTimeout(function(){
-         obj.style.background = orig;
-    }, 100);
-    
+    if (practice_q_finished){
+        var orig = obj.style.background;
+        obj.style.background = 'grey';
+        x = setTimeout(function(){
+            obj.style.background = orig;
+        }, 100);
+    }    
  }
+
+let practice_q_finished = false
+
+
 $(document).ready(function () {
     $("#title").append("<h1>"+lesson["chord"]+"</h1>")
     $("#lessontext").append("<p>"+lesson["text"]+"</p>")
         $("#buttondiv").empty();
         document.getElementById("comment").style.visibility= "hidden";
-
+        practice_q_finished = false
         
 
        //$("#buttondiv").append("<button id = 'next_button'> Next </button>");
@@ -36,30 +41,31 @@ $(document).ready(function () {
         playing_notes()
         let missing_num = lesson["notes"][2]
         disableBut();
-       $(".key").click(function(){
-        $('#comment').removeClass('greenText');
-        $('#comment').removeClass('redText');
+        $(".key").click(function(){
+            console.log(practice_q_finished)
+            $('#comment').removeClass('greenText');
+            $('#comment').removeClass('redText');
 
-
-        if (this.id==missing_num){
-            //this.style.background = 'green'
-            this.className = 'green'
-            enableBut();
-            document.getElementById("comment").style.visibility= "visible";
-            $("#comment").text("That is correct! Proceed to Next Screen")
-            $('#comment').addClass('greenText');
-
-        
-        }
-        else{
-            //highlight(this
-            this.style.background = 'red'
-            document.getElementById("comment").style.visibility= "visible";
-            $('#comment').addClass('redText');
-            $("#comment").text("That is incorrect. Try Again!")
-
-
-        }
+            if (practice_q_finished == false){
+                if (this.id==missing_num){
+                    //this.style.background = 'green'
+                    this.className = 'green'
+                    enableBut();
+                    document.getElementById("comment").style.visibility= "visible";
+                    $("#comment").text("That is correct! Proceed to Next Screen")
+                    $('#comment').addClass('greenText');
+                    practice_q_finished = true
+                }
+                else{
+                    this.style.background = 'red'
+                    document.getElementById("comment").style.visibility= "visible";
+                    $('#comment').addClass('redText');
+                    $("#comment").text("That is incorrect. Try Again!")
+    
+    
+                }
+            }
+            
     })
 
 
@@ -81,7 +87,7 @@ $(document).ready(function () {
 function playing_notes()
 {
     $("#C5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -90,7 +96,7 @@ function playing_notes()
     })
 
     $("#Db5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -99,7 +105,7 @@ function playing_notes()
     })
 
     $("#D5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -108,7 +114,7 @@ function playing_notes()
     })
 
     $("#Eb5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -117,7 +123,7 @@ function playing_notes()
     })
 
     $("#E5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -126,7 +132,7 @@ function playing_notes()
     })
 
     $("#F5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -135,7 +141,7 @@ function playing_notes()
     })
 
     $("#Gb5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -144,7 +150,7 @@ function playing_notes()
     })
 
     $("#G5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -153,7 +159,7 @@ function playing_notes()
     })
 
     $("#Ab5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -162,7 +168,7 @@ function playing_notes()
     })
 
     $("#A5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -171,7 +177,7 @@ function playing_notes()
     })
 
     $("#Bb5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -180,7 +186,7 @@ function playing_notes()
     })
 
     $("#B5").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -189,7 +195,7 @@ function playing_notes()
     })
 
     $("#C6").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -198,7 +204,7 @@ function playing_notes()
     })
 
     $("#Db6").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -207,7 +213,7 @@ function playing_notes()
     })
 
     $("#D6").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
@@ -216,7 +222,7 @@ function playing_notes()
     })
 
     $("#Eb6").click(function(){
-        //highlight(this
+        highlight(this)
         var audio = new Audio();
         audio.src="/static/wav/" + this.id + ".wav"
         audio.playbackRate = 0.8
