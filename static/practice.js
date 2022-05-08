@@ -48,7 +48,6 @@ $(document).ready(function () {
 
             if (practice_q_finished == false){
                 if (this.id==missing_num){
-                    //this.style.background = 'green'
                     this.className = 'green'
                     enableBut();
                     document.getElementById("comment").style.visibility= "visible";
@@ -64,6 +63,9 @@ $(document).ready(function () {
     
     
                 }
+            }
+            else{
+                $('#comment').addClass('greenText');
             }
             
     })
