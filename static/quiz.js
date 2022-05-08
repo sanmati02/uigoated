@@ -1,15 +1,20 @@
 function highlight(obj){
-    var orig = obj.style.background;
-    obj.style.background = 'red';
-    setTimeout(function(){
-         obj.style.background = orig;
-    }, 100); 
+    if (question_finished){
+        var orig = obj.style.background;
+        obj.style.background = 'grey';
+        setTimeout(function(){
+            obj.style.background = orig;
+        }, 100); 
+
+    }
  }
+
+ let question_finished = false;
 
  function playing_notes()
  {
      $("#C5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -18,7 +23,7 @@ function highlight(obj){
      })
  
      $("#Db5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -27,7 +32,7 @@ function highlight(obj){
      })
  
      $("#D5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -36,7 +41,7 @@ function highlight(obj){
      })
  
      $("#Eb5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -45,7 +50,7 @@ function highlight(obj){
      })
  
      $("#E5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -54,7 +59,7 @@ function highlight(obj){
      })
  
      $("#F5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -63,7 +68,7 @@ function highlight(obj){
      })
  
      $("#Gb5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -72,7 +77,7 @@ function highlight(obj){
      })
  
      $("#G5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -81,7 +86,7 @@ function highlight(obj){
      })
  
      $("#Ab5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -90,7 +95,7 @@ function highlight(obj){
      })
  
      $("#A5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -99,7 +104,7 @@ function highlight(obj){
      })
  
      $("#Bb5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -108,7 +113,7 @@ function highlight(obj){
      })
  
      $("#B5").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -117,7 +122,7 @@ function highlight(obj){
      })
  
      $("#C6").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -126,7 +131,7 @@ function highlight(obj){
      })
  
      $("#Db6").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -135,7 +140,7 @@ function highlight(obj){
      })
  
      $("#D6").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -144,7 +149,7 @@ function highlight(obj){
      })
  
      $("#Eb6").click(function(){
-         //highlight(this)
+         highlight(this)
          var audio = new Audio();
          audio.src="/static/wav/" + this.id + ".wav"
          audio.playbackRate = 0.8
@@ -245,6 +250,7 @@ $(document).ready(function () {
     let clicked = []
     console.log("clicked: " + clicked)
     count = 3
+    question_finished = false
     playing_notes()
     $(".key").click(function(){
         //$('#comment').removeClass('greenText');
@@ -267,6 +273,7 @@ $(document).ready(function () {
                 $("#comment").text("That is correct! Proceed to Next Screen")
                 $("#score").empty()
                 $("#score").append("<div>Score: "+score+"</div>")
+                question_finished = true
             }
             if (count == 1) {
                 score += 1
@@ -308,7 +315,6 @@ $(document).ready(function () {
             save_score(score)
             $("#score").empty()
             $("#score").append("<div>Score: "+score+"</div>")
-            //highlight(this)
             //$("#comment").append("<div class = redText>That is incorrect. Try Again!<div>")
             document.getElementById("comment").style.visibility= "visible";
             $('#comment').addClass('redText');
