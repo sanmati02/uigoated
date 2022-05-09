@@ -103,30 +103,6 @@ quizzes = {
     "1": {
     "quiz_id": "1",
     "next_question":"2",
-    "chord": "C Major Chord",
-    "text": "Pick the notes in the C Major Chord.",
-    "answer":["C5", "E5", "G5"],
-    "note_nums":["1","5","8"],
-    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
-            "third is two whole steps up from the root and the fifth is a whole step and a half up from the third. Each key "
-            "on the piano is a half step and a whole step is made up of two half steps! "
-    },
-
-    "2": {
-    "quiz_id": "2",
-    "next_question":"3",
-    "chord": "D Minor Chord",
-    "text": "Pick the notes in the D Minor Chord.",
-    "answer":["D5", "F5", "A5"],
-    "note_nums":["3","7","10"],
-    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
-            "is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
-            "Each key "
-            "on the piano is a half step and a whole step is made up of two half steps! "
-    },
-    "3": {
-    "quiz_id": "3",
-    "next_question":"4",
     "chord": "E Minor Chord",
     "text": "Pick the notes in the E Minor Chord.",
     "answer":["E5", "G5", "B5"],
@@ -136,15 +112,38 @@ quizzes = {
             "Each key "
             "on the piano is a half step and a whole step is made up of two half steps! "
     },
-    "4": {
-    "quiz_id": "4",
-    "next_question":"end",
+    "2": {
+    "quiz_id": "2",
+    "next_question":"3",
+    "chord": "C Major Chord",
+    "text": "Pick the notes in the C Major Chord.",
+    "answer":["C5", "E5", "G5"],
+    "note_nums":["1","5","8"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
+            "third is two whole steps up from the root and the fifth is a whole step and a half up from the third. Each key "
+            "on the piano is a half step and a whole step is made up of two half steps! "
+    },
+    "3": {
+    "quiz_id": "3",
+    "next_question":"4",
     "chord": "F Major Chord",
     "text": "Pick the notes in the F Major Chord.",
     "answer":["F5", "A5", "C6"],
     "note_nums":["6","10","13"],
     "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a major chord, the major "
             "third is two whole steps up from the root and the fifth is a whole step and a half up from the third. Each key "
+            "on the piano is a half step and a whole step is made up of two half steps! "
+    },
+    "4": {
+    "quiz_id": "4",
+    "next_question":"end",
+    "chord": "D Minor Chord",
+    "text": "Pick the notes in the D Minor Chord.",
+    "answer":["D5", "F5", "A5"],
+    "note_nums":["3","7","10"],
+    "hint": "Each chord is made up of three notes. The root, the fifth, and the third. In a minor chord, the minor third "
+            "is a whole step and a half up from the root and the fifth is two whole steps up from the third. "
+            "Each key "
             "on the piano is a half step and a whole step is made up of two half steps! "
     }
 }
