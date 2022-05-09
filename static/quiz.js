@@ -254,9 +254,10 @@ $(document).ready(function () {
     playing_notes()
     $(".key").click(function(){
         //$('#comment').removeClass('greenText');
-        $('#comment').removeClass('redText');
+        
         item = question["answer"]
         if (item.includes(this.id) && (clicked.includes(this.id) == false)){
+            $('#comment').removeClass('redText');
             this.className = "green";
             count -= 1
             $//("#comment").empty()
