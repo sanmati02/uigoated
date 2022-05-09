@@ -87,7 +87,7 @@
   }
 
   .redText {
-    color: rgb(190, 102, 102);
+    color: rgb(219, 59, 59);
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -172,8 +172,8 @@
   text-align: center !important;
 }
 .startbutton{
-  
-  background-color: #0e89b6;
+  /*background: rgb(133, 72, 10);*/
+  /*background: linear-gradient(0deg, rgba(110,56,3,1) 0%, rgba(154,80,4,1) 58%, rgba(194,95,7,1) 100%);*/
   color:white;
   border-width: 1px;
   border-radius:5px;
@@ -183,7 +183,7 @@
 
 .endLearn{
   
-  background-color: #0e89b6;
+  /*background-color: #0e89b6;*/
   color:white;
   border-width: 1px;
   border-radius:5px;
@@ -200,7 +200,7 @@
 
 .buttonPrevNext{
   
-    background-color: #0e89b6;
+    /*background-color: #0e89b6;*/
     color:white;
     border-width: 1px;
     border-radius:5px;
